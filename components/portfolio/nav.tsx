@@ -1,0 +1,186 @@
+"use client"
+
+import { useState, useEffect, useRef } from "react"
+import Link from "next/link"
+import { Github, Twitter, Linkedin, Menu, X } from "lucide-react"
+
+const FULL_NAME = "sylvain"
+
+function useTypewriter(text: string, speed = 80, startDelay = 400) {
+  const [displayed, setDisplayed] = useState("")
+  const [done, setDone] = useState(false)
+
+  useEffect(() => {
+    let i = 0
+    setDisplayed("")
+    setDone(false)
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        i++
+        setDisplayed(text.slice(0, i))
+        if (i >= text.length) {
+          clearInterval(interval)
+          setDone(true)
+        }
+      }, speed)
+      return () => clearInterval(interval)
+    }, startDelay)
+    return () => clearTimeout(timeout)
+  }, [text, speed, startDelay])
+
+  return { displayed, done }
+}
+
+const navLinks = [
+  { label: "Writing", href: "#work" },
+  { label: "Talks", href: "#work" },
+  { label: "About", href: "#about" },
+]
+
+function scrollTo(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  e.preventDefault()
+  const id = href.replace("#", "")
+  const el = document.getElementById(id)
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - 72
+    window.scrollTo({ top, behavior: "smooth" })
+  }
+}
+
+const socialLinks = [
+  { icon: Linkedin, href: "https://www.linkedin.com/in/sylvainkalache/", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/Rootly-AI-Labs", label: "GitHub" },
+  { icon: Twitter, href: "https://x.com/sylvainkalache", label: "X / Twitter" },
+]
+
+export function Nav() {
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const { displayed, done } = useTypewriter(FULL_NAME, 90, 300)
+  const cursorRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Blink cursor after typing finishes
+  useEffect(() => {
+    if (!done || !cursorRef.current) return
+    let visible = true
+    const id = setInterval(() => {
+      if (cursorRef.current) {
+        visible = !visible
+        cursorRef.current.style.opacity = visible ? "1" : "0"
+      }
+    }, 530)
+    return () => clearInterval(id)
+  }, [done])
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/90 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
+      }`}
+    >
+      <nav
+        className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between"
+        aria-label="Main navigation"
+      >
+        {/* Logo / Name */}
+        <Link
+          href="/"
+          className="font-mono text-sm font-medium text-foreground hover:text-accent transition-colors inline-flex items-center"
+          aria-label="Sylvain Kalache — home"
+        >
+          <span className="text-accent">~/</span>
+          <span>{displayed}</span>
+          <span
+            ref={cursorRef}
+            className="inline-block w-[2px] h-[1em] bg-accent ml-[1px] align-middle translate-y-[-1px]"
+            aria-hidden="true"
+          />
+        </Link>
+
+        {/* Desktop nav */}
+        <ul className="hidden md:flex items-center gap-8" role="list">
+          {navLinks.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                onClick={(e) => scrollTo(e, link.href)}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Social icons */}
+        <ul className="hidden md:flex items-center gap-3" role="list">
+          {socialLinks.map(({ icon: Icon, href, label }) => (
+            <li key={label}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+              >
+                <Icon size={16} />
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile menu toggle */}
+        <button
+          className="md:hidden w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground"
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+        >
+          {mobileOpen ? <X size={18} /> : <Menu size={18} />}
+        </button>
+      </nav>
+
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 pb-6 pt-2">
+          <ul className="flex flex-col gap-4 mb-6" role="list">
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
+                  onClick={(e) => { scrollTo(e, link.href); setMobileOpen(false) }}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex items-center gap-4" role="list">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Icon size={18} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </header>
+  )
+}

@@ -1,0 +1,623 @@
+[
+  {
+    "index": 1,
+    "url": "https://venturebeat.com/2015/11/22/10-ways-startups-can-get-the-most-out-of-linkedin/",
+    "publication": "VentureBeat",
+    "date": "2015-11-22",
+    "title": "10 Ways Startups Can Get the Most out of LinkedIn",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 2,
+    "url": "https://www.ccn.com/parisian-engineering-school-will-certify-diplomas-blockchain/",
+    "publication": "CCN",
+    "date": null,
+    "title": "Parisian Engineering School Will Certify Diplomas on the Blockchain",
+    "og_image": "https://www.ccn.com/wp-content/uploads/2016/01/ESILV.jpg",
+    "thumbnail": "news-2.jpg"
+  },
+  {
+    "index": 3,
+    "url": "https://www.lemonde.fr/economie/article/2016/01/23/des-frenchies-lancent-une-ecole-dans-la-silicon-valley_4852370_3234.html",
+    "publication": "Le Monde",
+    "date": "2016-01-23",
+    "title": "Des « Frenchies » lancent une école dans la Silicon Valley",
+    "og_image": "https://img.lemde.fr/2016/01/23/19/29/960/640/1440/960/60/0/f59278b_389-1119sli.jpg",
+    "thumbnail": "news-3.jpg"
+  },
+  {
+    "index": 4,
+    "url": "https://venturebeat.com/2016/02/04/linkedin-now-has-414-million-members-with-57-of-traffic-coming-from-mobile/",
+    "publication": "VentureBeat",
+    "date": "2016-02-04",
+    "title": "LinkedIn Now Has 414 Million Members, with 57% of Traffic Coming from Mobile",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 5,
+    "url": "https://venturebeat.com/2016/03/01/linkedin-now-automates-its-ad-targeting-based-on-your-sales-leads/",
+    "publication": "VentureBeat",
+    "date": "2016-03-01",
+    "title": "LinkedIn Now Automates Its Ad Targeting Based on Your Sales Leads",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 6,
+    "url": "https://www.lemonde.fr/pixels/article/2016/04/02/ces-francais-qui-veulent-apprendre-aux-americains-a-coder_6003264_4408996.html",
+    "publication": "Le Monde",
+    "date": "2016-04-02",
+    "title": "Ces Français qui veulent apprendre aux Américains à coder",
+    "og_image": "https://asset.lemde.fr/medias/img/social-network/default.png",
+    "thumbnail": "news-6.jpg"
+  },
+  {
+    "index": 7,
+    "url": "https://www.cnbc.com/2016/05/09/schools-are-recording-students-results-on-the-blockchain.html",
+    "publication": "CNBC",
+    "date": "2016-05-09",
+    "title": "Schools are using bitcoin technology to track students",
+    "og_image": "https://image.cnbcfm.com/api/v1/image/101589616-10129324.jpg?v=1532564504&amp;w=1920&amp;h=1080",
+    "thumbnail": "news-7.jpg"
+  },
+  {
+    "index": 8,
+    "url": "https://www.huffingtonpost.fr/phil-jeudy/trouver-travail-silicon-valley_b_6907612.html",
+    "publication": "Huffington Post",
+    "date": null,
+    "title": "Aider à trouver un job dans la Silicon Valley: la raison d'être du tout nouveau TechMeAbroad",
+    "og_image": "https://focus.huffingtonpost.fr/2022/07/22/0/35/558/314/1820/1023/75/0/467efca_1658531602106-5c93a5a2230000a3006d564c.jpeg",
+    "thumbnail": "news-8.jpg"
+  },
+  {
+    "index": 9,
+    "url": "https://venturebeat.com/2016/07/11/international-botathon-finalists-selected-to-present-at-mobilebeat-2016/",
+    "publication": "VentureBeat",
+    "date": "2016-07-11",
+    "title": "International Botathon Finalists Selected to Present at MobileBeat 2016",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 10,
+    "url": "https://incafrica.com/salvador-rodriguez/long-term-coding-schools.html",
+    "publication": "Inc Africa",
+    "date": null,
+    "title": "Long-Term Coding Schools",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 11,
+    "url": "https://www.cio.com/article/236150/next-generation-of-software-engineers-need-training-not-retraining.html",
+    "publication": "CIO",
+    "date": null,
+    "title": "Next generation of software engineers need training, not retraining",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 12,
+    "url": "https://www.lemonde.fr/campus/article/2016/10/18/sylvain-kalache-createur-de-la-holberton-school-la-capacite-d-adaptation-est-la-competence-cle_5015623_4401467.html",
+    "publication": "Le Monde",
+    "date": "2016-10-18",
+    "title": "Sylvain Kalache, créateur de la Holberton School : « La capacité d’adaptation est la compétence-clé »",
+    "og_image": "https://img.lemde.fr/2016/10/14/0/2/1083/722/1440/960/60/0/991f3fc_9580-a4hko8.ssc61lwhfr.jpg",
+    "thumbnail": "news-12.jpg"
+  },
+  {
+    "index": 13,
+    "url": "https://money.cnn.com/2016/11/12/technology/holberton-school-tech-education/",
+    "publication": "CNN Money",
+    "date": "2016-11-12",
+    "title": "The Holberton School in San Francisco is a two-year college alternative for programmers. Just a year old, its students have already landed jobs at firms like Apple.",
+    "og_image": "https://web.archive.org/web/20250423054212im_/https://i2.cdn.turner.com/money/dam/assets/161110094616-holberton-dora-780x439.jpg",
+    "thumbnail": "news-13.jpg"
+  },
+  {
+    "index": 14,
+    "url": "https://insights.dice.com/2016/11/21/whiteboard-interview-problems/",
+    "publication": "Dice Insights",
+    "date": "2016-11-21",
+    "title": "Is It Time to Kill the Whiteboard Interview?",
+    "og_image": "https://www.dice.com/binaries/large/content/gallery/dice/insights/2016/11/shutterstock_394554319.jpg",
+    "thumbnail": "news-14.jpg"
+  },
+  {
+    "index": 15,
+    "url": "https://www.lemonde.fr/o21/article/2016/12/12/cinq-pistes-pour-trouver-sa-voie-d-orientation_5047490_5014018.html",
+    "publication": "Le Monde",
+    "date": "2016-12-12",
+    "title": "« Que conseilleriez-vous pour trouver sa voie, ou aider quelqu’un à trouver la sienne ? »",
+    "og_image": "https://img.lemde.fr/2016/12/06/3/0/6016/4010/1440/960/60/0/fd60218_11029-1g10d0k.15kcr9hpvi.jpg",
+    "thumbnail": "news-15.jpg"
+  },
+  {
+    "index": 16,
+    "url": "https://fortune.com/2017/02/06/new-age-school-raises-2-3-million-to-train-techies/",
+    "publication": "Fortune",
+    "date": "2017-02-06",
+    "title": "New Age Holberton School Scores $2.3 Million to Train Techies Faster | Fortune",
+    "og_image": "https://fortune.com/img-assets/wp-content/uploads/2017/02/founders.jpg?resize=1200,600",
+    "thumbnail": "news-16.jpg"
+  },
+  {
+    "index": 17,
+    "url": "https://www.lemonde.fr/campus/article/2017/03/21/les-metiers-de-la-french-touch-atouts-pour-passer-les-frontieres_5098551_4401467.html",
+    "publication": "Le Monde",
+    "date": "2017-03-21",
+    "title": "Les métiers de la French touch, atouts pour passer les frontières",
+    "og_image": "https://img.lemde.fr/2017/03/21/1/0/4256/2837/1440/960/60/0/e1f3b1d_2062-11ksjeh.qdat7w4s4i.jpg",
+    "thumbnail": "news-17.jpg"
+  },
+  {
+    "index": 18,
+    "url": "https://www.globenewswire.com/en/news-release/2017/03/22/969429/0/en/Holberton-School-for-Computer-Science-and-Software-Engineering-Founders-Awarded-Prestigious-EdTech-Digest-Education-Leaders-Award.html",
+    "publication": "GlobeNewsWire",
+    "date": "2017-03-22",
+    "title": "Holberton School for Computer Science and Software Engineering Founders Awarded Prestigious EdTech Digest Education Leaders Award",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 19,
+    "url": "https://fortune.com/2017/04/18/how-rooney-ruled/",
+    "publication": "Fortune",
+    "date": "2017-04-18",
+    "title": "How Rooney Ruled | Fortune",
+    "og_image": "https://content.fortune.com/wp-content/uploads/2020/09/placeholder_16x9.jpg?resize=1200,600",
+    "thumbnail": "news-19.jpg"
+  },
+  {
+    "index": 20,
+    "url": "https://www.lemonde.fr/ingenieurs-sciences/article/2017/05/18/les-ecoles-de-la-french-tech-s-exportent_5129973_4468267.html",
+    "publication": "Le Monde",
+    "date": "2017-05-18",
+    "title": "Les écoles de la « french tech » s’exportent",
+    "og_image": "https://img.lemde.fr/2017/05/16/0/281/1618/1079/1440/960/60/0/8966e7a_1471-1mb5jmo.yq43brcnmi.jpg",
+    "thumbnail": "news-20.jpg"
+  },
+  {
+    "index": 21,
+    "url": "https://fortune.com/2017/05/30/ne-yo-holberton-school-software-camp/",
+    "publication": "Fortune",
+    "date": "2017-05-30",
+    "title": "Grammy Winner Ne-Yo Backs Software Camp for Kids | Fortune",
+    "og_image": "https://fortune.com/img-assets/wp-content/uploads/2017/05/neyo.jpg?resize=1200,600",
+    "thumbnail": "news-21.jpg"
+  },
+  {
+    "index": 22,
+    "url": "https://www.globenewswire.com/en/news-release/2017/05/30/1000071/0/en/Grammy-Winner-NE-YO-to-Sponsor-Summer-Coding-Camp-in-San-Francisco.html",
+    "publication": "GlobeNewsWire",
+    "date": "2017-05-30",
+    "title": "Grammy Winner NE-YO to Sponsor Summer Coding Camp in San Francisco",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/7dfe7958-cd62-4f05-9f4c-17b356aaa517",
+    "thumbnail": "news-22.jpg"
+  },
+  {
+    "index": 23,
+    "url": "https://www.nytimes.com/2017/06/07/education/holberton-a-two-year-tech-school-emphasizes-diversity.html",
+    "publication": "The New York Times",
+    "date": "2017-06-07",
+    "title": "Holberton, a Two-Year Tech School, Emphasizes Diversity (Published 2017)",
+    "og_image": "https://static01.nyt.com/images/2017/06/08/us/07HOLBERTONweb1/07HOLBERTONweb1-facebookJumbo.jpg?year=2017&amp;h=550&amp;w=1050&amp;s=cc12bbebdc90a26b4c48ff22c685781840e13ba18ebba4951ac1eb640e6c8d20&amp;k=ZQJBKqZ0VN",
+    "thumbnail": "news-23.jpg"
+  },
+  {
+    "index": 24,
+    "url": "https://techcrunch.com/2017/10/25/holberton-gets-backing-from-more-industry-executives-as-it-looks-to-scale-its-software-engineering-school/",
+    "publication": "TechCrunch",
+    "date": "2017-10-25",
+    "title": "Holberton gets backing from more industry executives as it looks to scale its software engineering school | TechCrunch",
+    "og_image": "https://techcrunch.com/wp-content/uploads/2017/10/33921629530_80e307e2d1_c-768x468.jpg",
+    "thumbnail": "news-24.jpg"
+  },
+  {
+    "index": 25,
+    "url": "https://www.weforum.org/agenda/2017/12/predictions-for-future-of-work/",
+    "publication": "World Economic Forum",
+    "date": "2017-12",
+    "title": "4 Realistic Predictions for The Future of Work",
+    "og_image": "https://web.archive.org/web/20240917015244im_/https://assets.weforum.org/editor/ZBIZSWPUXhfiYt704X6VY_NlKcGWe9BKxe53Ha89yt0.png",
+    "thumbnail": "news-25.jpg"
+  },
+  {
+    "index": 26,
+    "url": "https://www.weforum.org/agenda/2018/01/podcast-education-for-the-fourth-industrial-revolution/",
+    "publication": "World Economic Forum",
+    "date": "2018-01",
+    "title": "Podcast: Education for the Fourth Industrial Revolution",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 27,
+    "url": "https://www.globenewswire.com/news-release/2018/04/09/1467241/0/en/Holberton-School-for-Software-Engineering-Closes-8-million-in-A-Round-Funding.html",
+    "publication": "GlobeNewsWire",
+    "date": "2018-04-09",
+    "title": "Holberton School for Software Engineering Closes $8 million in A Round Funding",
+    "og_image": "https://resource.globenewswire.com/Resource/Download/243d1365-198c-4de2-98fa-a65e71a74557",
+    "thumbnail": "news-27.jpg"
+  },
+  {
+    "index": 28,
+    "url": "https://www.forbes.com/sites/alexkonrad/2018/04/09/holberton-school-raises-8-2-million/",
+    "publication": "Forbes",
+    "date": "2018-04-09",
+    "title": "Holberton School Raises $8.2 Million To Expand Its Engineer-Training Program",
+    "og_image": "https://imageio.forbes.com/blogs-images/alexkonrad/files/2018/04/2016-12.09-Holberton-School-Ne-Yo-42.jpg?format=jpg&amp;height=900&amp;width=1600&amp;fit=bounds",
+    "thumbnail": "news-28.jpg"
+  },
+  {
+    "index": 29,
+    "url": "https://www.forbes.com/sites/forbessanfranciscocouncil/2018/05/23/seven-marketing-initiatives-that-can-help-san-francisco-businesses-grow/",
+    "publication": "Forbes",
+    "date": "2018-05-23",
+    "title": "Seven Marketing Initiatives That Can Help San Francisco Businesses Grow",
+    "og_image": "https://imageio.forbes.com/blogs-images/forbessanfranciscocouncil/files/2018/05/Seven-Marketing-Initiatives-That-Can-Help-San-Francisco-Businesses-Grow-1200x620.png?format=png&amp;height=900&amp;width=1600&amp;fit=bounds",
+    "thumbnail": "news-29.jpg"
+  },
+  {
+    "index": 30,
+    "url": "https://www.forbes.com/sites/forbesmarketplace/2018/05/31/meet-six-members-of-forbes-san-francisco-business-council/",
+    "publication": "Forbes",
+    "date": "2018-05-31",
+    "title": "Meet Six Members of Forbes San Francisco Business Council",
+    "og_image": "https://imageio.forbes.com/blogs-images/forbesmarketplace/files/2018/05/header-image-for-San-Francisco-council-spotlight-1200x619.png?format=png&amp;height=900&amp;width=1600&amp;fit=bounds",
+    "thumbnail": "news-30.jpg"
+  },
+  {
+    "index": 31,
+    "url": "https://www.cio.com/article/221783/how-the-best-managers-find-hidden-tech-talent.html",
+    "publication": "CIO",
+    "date": null,
+    "title": "How the best managers find hidden tech talent",
+    "og_image": "https://www.cio.com/wp-content/uploads/2023/05/people-295145_1280-100698813-orig.jpg?quality=50&amp;strip=all&amp;w=1024",
+    "thumbnail": "news-31.jpg"
+  },
+  {
+    "index": 32,
+    "url": "https://www.nytimes.com/2018/09/21/technology/artificial-intelligence-jobs.html",
+    "publication": "The New York Times",
+    "date": "2018-09-21",
+    "title": "The Week in Tech: Are Robots Coming for Your Job? Eventually, Yes. (Published 2018)",
+    "og_image": "https://static01.nyt.com/images/2018/09/22/business/22technewsletter-1/22technewsletter-1-facebookJumbo.jpg?year=2018&amp;h=550&amp;w=1050&amp;s=41aa1b817fb7c759368507e765f7b0b56614cb7f646e47a0d3d144bcc900d4a9&amp;k=ZQJBKqZ0VN",
+    "thumbnail": "news-32.jpg"
+  },
+  {
+    "index": 33,
+    "url": "https://techcrunch.com/2018/09/29/ne-yo-wants-to-make-silicon-valley-more-diverse/",
+    "publication": "TechCrunch",
+    "date": "2018-09-29",
+    "title": "Ne-Yo wants to make Silicon Valley more diverse, one investment at a time | TechCrunch",
+    "og_image": "https://techcrunch.com/wp-content/uploads/2018/09/JE2_9722.jpg",
+    "thumbnail": "news-33.jpg"
+  },
+  {
+    "index": 34,
+    "url": "https://www.forbes.com/sites/forbessanfranciscocouncil/2018/10/25/seven-san-francisco-entrepreneurs-share-their-strategies-for-giving-back/",
+    "publication": "Forbes",
+    "date": "2018-10-25",
+    "title": "Seven San Francisco Entrepreneurs Share Their Strategies for Giving Back",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 35,
+    "url": "https://www.cio.com/article/222638/5-reasons-devops-initiatives-fail.html",
+    "publication": "CIO",
+    "date": null,
+    "title": "5 reasons DevOps initiatives fail",
+    "og_image": "https://www.cio.com/wp-content/uploads/2023/05/devops-fists-100731546-orig-1.jpg?quality=50&amp;strip=all&amp;w=1024",
+    "thumbnail": "news-35.jpg"
+  },
+  {
+    "index": 36,
+    "url": "https://www.forbes.com/sites/forbessanfranciscocouncil/2019/01/07/five-tips-for-handling-local-competition/",
+    "publication": "Forbes",
+    "date": "2019-01-07",
+    "title": "Five Tips for Handling Local Competition",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 37,
+    "url": "https://www.cio.com/article/219673/the-future-of-code-quality-security-and-agility-lies-in-machine-learning.html",
+    "publication": "CIO",
+    "date": null,
+    "title": "The future of code quality, security and agility lies in machine learning",
+    "og_image": "https://www.cio.com/wp-content/uploads/2023/08/code-100783332-orig.jpg?quality=50&amp;strip=all&amp;w=1024",
+    "thumbnail": "news-37.jpg"
+  },
+  {
+    "index": 38,
+    "url": "https://venturebeat.com/2019/02/12/linkedin-previews-shared-inmails-instant-job-notifications-and-other-new-features-coming-summer-2019/",
+    "publication": "VentureBeat",
+    "date": "2019-02-12",
+    "title": "LinkedIn Previews Shared InMails, Instant Job Notifications, and Other New Features Coming Summer 2019",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 39,
+    "url": "https://www.forbes.com/sites/forbessanfranciscocouncil/2019/03/06/six-ways-to-diversify-your-workforce/",
+    "publication": "Forbes",
+    "date": "2019-03-06",
+    "title": "Six Ways to Diversify Your Workforce",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 40,
+    "url": "https://techcrunch.com/2019/06/10/holberton-opens-its-software-engineering-school-in-medellin/",
+    "publication": "TechCrunch",
+    "date": "2019-06-10",
+    "title": "Holberton opens its software engineering school in Medellin | TechCrunch",
+    "og_image": "https://techcrunch.com/wp-content/uploads/2019/06/PEER_LEARNING_06_194.jpg?resize=1200,800",
+    "thumbnail": "news-40.jpg"
+  },
+  {
+    "index": 41,
+    "url": "https://www.globenewswire.com/news-release/2019/06/10/1866541/0/en/Colombia-Bets-Big-on-Digital-Economy-Attracts-Silicon-Valley-Software-Engineering-School-and-Opens-Second-Campus.html",
+    "publication": "GlobeNewsWire",
+    "date": "2019-06-10",
+    "title": "Colombia Bets Big on Digital Economy; Attracts Silicon Valley Software Engineering School and Opens Second Campus",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d09c68d4-be2f-4834-babf-d36601646987",
+    "thumbnail": "news-41.jpg"
+  },
+  {
+    "index": 42,
+    "url": "https://www.globenewswire.com/news-release/2019/06/18/1870541/0/en/Holberton-School-and-Unity-Technologies-Partner-to-Turn-Schools-into-Augmented-Reality-Virtual-Reality-Learning-Centers.html",
+    "publication": "GlobeNewsWire",
+    "date": "2019-06-18",
+    "title": "Holberton School and Unity Technologies Partner to Turn Schools into Augmented Reality/Virtual Reality Learning Centers",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d09c68d4-be2f-4834-babf-d36601646987",
+    "thumbnail": "news-42.jpg"
+  },
+  {
+    "index": 43,
+    "url": "https://www.forbes.com/sites/yolarobert1/2019/07/02/priyanka-chopra-jonas-joins-the-holberton-school-as-an-investor/",
+    "publication": "Forbes",
+    "date": "2019-07-02",
+    "title": "Priyanka Chopra-Jonas Joins The Holberton School As An Investor",
+    "og_image": "https://imageio.forbes.com/blogs-images/yolarobert1/files/2019/07/JE1_5850-1200x797.jpg?format=jpg&amp;height=900&amp;width=1600&amp;fit=bounds",
+    "thumbnail": "news-43.jpg"
+  },
+  {
+    "index": 44,
+    "url": "https://www.globenewswire.com/en/news-release/2019/07/10/1880992/0/en/Holberton-School-Expansion-Continues-with-African-Campus.html",
+    "publication": "GlobeNewsWire",
+    "date": "2019-07-10",
+    "title": "Holberton School Expansion Continues with African Campus",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d7d1156e-ed06-4f35-a85a-51a8907c6ebf",
+    "thumbnail": "news-44.jpg"
+  },
+  {
+    "index": 45,
+    "url": "https://www.forbes.com/sites/forbessanfranciscocouncil/2019/09/12/content-marketing-strategies-six-ways-san-francisco-small-businesses-can-stand-out/",
+    "publication": "Forbes",
+    "date": "2019-09-12",
+    "title": "Content Marketing Strategies: Six Ways San Francisco Small Businesses Can Stand Out",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 46,
+    "url": "https://www.forbes.com/sites/forbessanfranciscocouncil/2019/09/18/six-things-to-remember-when-expanding-your-business-beyond-san-francisco/",
+    "publication": "Forbes",
+    "date": "2019-09-18",
+    "title": "Six Things to Remember When Expanding Your Business Beyond San Francisco",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 47,
+    "url": "https://www.challenges.fr/club-entrepreneurs/holberton-school-cette-etonnante-ecole-d-informatique-que-les-etudiants-payent-une-fois-embauches_682251",
+    "publication": "Challenges",
+    "date": null,
+    "title": "Holberton School, cette étonnante école d'informatique que les étudiants payent une fois embauchés",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 48,
+    "url": "https://www.forbes.fr/management/holberton-school-lecole-qui-forme-les-ingenieurs-informatiques-de-demain/",
+    "publication": "Forbes France",
+    "date": null,
+    "title": "Holberton School, L’Ecole Qui Forme Les Ingénieurs Informatiques De Demain - Forbes France",
+    "og_image": "https://www.forbes.fr/wp-content/uploads/2019/11/school.jpg",
+    "thumbnail": "news-48.jpg"
+  },
+  {
+    "index": 49,
+    "url": "https://www.globenewswire.com/news-release/2019/11/25/1952161/0/en/Legendary-Educator-Esther-Wojcicki-Joins-Board-of-Trustees-of-Holberton-School.html",
+    "publication": "GlobeNewsWire",
+    "date": "2019-11-25",
+    "title": "Legendary Educator Esther Wojcicki Joins Board of Trustees of Holberton School",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d138c375-4652-4de1-9ca2-0079e2686576",
+    "thumbnail": "news-49.jpg"
+  },
+  {
+    "index": 50,
+    "url": "https://www.globenewswire.com/news-release/2019/12/17/1961819/0/en/Holberton-School-Launches-New-Machine-Learning-Curriculum-Encouraging-Greater-Diversity-in-this-Increasingly-Important-Field.html",
+    "publication": "GlobeNewsWire",
+    "date": "2019-12-17",
+    "title": "Holberton School Launches New Machine Learning Curriculum Encouraging Greater Diversity in this Increasingly Important Field",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d138c375-4652-4de1-9ca2-0079e2686576",
+    "thumbnail": "news-50.jpg"
+  },
+  {
+    "index": 51,
+    "url": "https://www.globenewswire.com/news-release/2020/02/06/1980688/0/en/Holberton-School-Hires-New-COO-Campus-Managers.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-02-06",
+    "title": "Holberton School Hires New COO, Campus Managers",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d138c375-4652-4de1-9ca2-0079e2686576",
+    "thumbnail": "news-51.jpg"
+  },
+  {
+    "index": 52,
+    "url": "https://www.globenewswire.com/news-release/2020/02/20/1988097/0/en/Holberton-School-Welcomes-New-Global-Cohort.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-02-20",
+    "title": "Holberton School Welcomes New Global Cohort",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d138c375-4652-4de1-9ca2-0079e2686576",
+    "thumbnail": "news-52.jpg"
+  },
+  {
+    "index": 53,
+    "url": "https://www.globenewswire.com/news-release/2020/03/06/1996735/0/en/In-Wake-of-Hurricane-Maria-and-Recent-Earthquake-Silicon-Valley-Software-Engineering-School-Opens-Campus-in-Puerto-Rico.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-03-06",
+    "title": "In Wake of Hurricane Maria and Recent Earthquake Silicon Valley Software Engineering School Opens Campus in Puerto Rico",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d138c375-4652-4de1-9ca2-0079e2686576",
+    "thumbnail": "news-53.jpg"
+  },
+  {
+    "index": 54,
+    "url": "https://www.globenewswire.com/news-release/2020/04/13/2015057/0/en/Leading-Coding-School-Holberton-Moves-Fully-Online.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-04-13",
+    "title": "Leading Coding School Holberton Moves Fully Online",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/34908e7c-9829-4c93-ab1c-34adb3e94196",
+    "thumbnail": "news-54.jpg"
+  },
+  {
+    "index": 55,
+    "url": "https://venturebeat.com/2020/04/30/linkedins-ai-gives-job-candidates-feedback-on-their-interview-answers/",
+    "publication": "VentureBeat",
+    "date": "2020-04-30",
+    "title": "LinkedIn's AI Gives Job Candidates Feedback on Their Interview Answers",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 56,
+    "url": "https://www.forbes.com/sites/yolarobert1/2020/07/13/legendary-songwriter-savan-kotecha-joins-holberton-school-board-of-trustees-to-increase-tech-diversity/",
+    "publication": "Forbes",
+    "date": "2020-07-13",
+    "title": "Legendary Songwriter Savan Kotecha Joins Holberton School Board Of Trustees To Increase Tech Diversity",
+    "og_image": "https://imageio.forbes.com/specials-images/imageserve/5f0c9c34371f0b00076bf713/0x0.jpg?format=jpg&amp;height=900&amp;width=1600&amp;fit=bounds",
+    "thumbnail": "news-56.jpg"
+  },
+  {
+    "index": 57,
+    "url": "https://www.globenewswire.com/en/news-release/2020/08/05/2073012/0/fr/Holberton-School-ouvre-ses-portes-en-France-offrant-1-000-000-de-bourse-etudiante.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-08-05",
+    "title": "Holberton School ouvre ses portes en France, offrant 1 000 000€ de bourse étudiante",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/ea0a5220-97e2-43ce-acb7-038eecef6315",
+    "thumbnail": "news-57.jpg"
+  },
+  {
+    "index": 58,
+    "url": "https://www.globenewswire.com/en/news-release/2020/11/02/2118158/0/en/Holberton-Brings-Silicon-Valley-Caliber-Software-Engineering-Education-to-Hauts-de-France.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-11-02",
+    "title": "Holberton Brings Silicon Valley Caliber Software Engineering Education to Hauts-de-France",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d7d1156e-ed06-4f35-a85a-51a8907c6ebf",
+    "thumbnail": "news-58.jpg"
+  },
+  {
+    "index": 59,
+    "url": "https://www.globenewswire.com/en/news-release/2020/11/13/2126723/0/pt/Ministro-do-Trabalho-e-Previdencia-Social-do-Uruguai-Inaugura-Campus-da-Holberton-School-em-Montevideu.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-11-13",
+    "title": "Ministro do Trabalho e Previdência Social do Uruguai Inaugura Campus da Holberton School em Montevidéu",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/ea0a5220-97e2-43ce-acb7-038eecef6315",
+    "thumbnail": "news-59.jpg"
+  },
+  {
+    "index": 60,
+    "url": "https://www.globenewswire.com/news-release/2020/11/13/2126333/0/en/Holberton-School-s-Montevideo-Campus-Inaugurated-by-Uruguay-s-Minister-of-Labor-and-Social-Welfare.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-11-13",
+    "title": "Holberton School’s Montevideo Campus Inaugurated by Uruguay’s Minister of Labor and Social Welfare",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/d7d1156e-ed06-4f35-a85a-51a8907c6ebf",
+    "thumbnail": "news-60.jpg"
+  },
+  {
+    "index": 61,
+    "url": "https://www.globenewswire.com/en/news-release/2020/12/03/2139405/0/es/Educacion-de-nivel-Silicon-Valley-llega-a-Peru.html",
+    "publication": "GlobeNewsWire",
+    "date": "2020-12-03",
+    "title": "Educación de nivel Silicon Valley llega a Perú",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/eccb5cd0-6c85-4b58-8838-8a393f271e66",
+    "thumbnail": "news-61.jpg"
+  },
+  {
+    "index": 62,
+    "url": "https://www.forbes.com/sites/forbesbusinesscouncil/2020/12/16/13-critical-considerations-when-planning-a-company-pivot/",
+    "publication": "Forbes",
+    "date": "2020-12-16",
+    "title": "13 Critical Considerations When Planning a Company Pivot",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 63,
+    "url": "https://www.globenewswire.com/news-release/2021/01/19/2160985/0/en/Coderise-International-joins-Holberton-School-Ecuador.html",
+    "publication": "GlobeNewsWire",
+    "date": "2021-01-19",
+    "title": "Coderise International joins Holberton School Ecuador",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/f1b2c9c9-16ba-459f-aa31-f349151f6ffd",
+    "thumbnail": "news-63.jpg"
+  },
+  {
+    "index": 64,
+    "url": "https://www.forbes.com/sites/forbesbusinesscouncil/2021/04/22/four-reasons-to-take-notes-by-hand/",
+    "publication": "Forbes",
+    "date": "2021-04-22",
+    "title": "Four Reasons to Take Notes by Hand",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 65,
+    "url": "https://techcrunch.com/2021/03/25/holberton-raises-20m-as-it-pivots-to-become-an-edtech-saas-company/",
+    "publication": "TechCrunch",
+    "date": "2021-03-25",
+    "title": "Holberton raises $20M as it pivots to become an edtech SaaS company | TechCrunch",
+    "og_image": "https://techcrunch.com/wp-content/uploads/2018/04/2016-12-09-holberton-school-ne-yo-59.jpg?resize=1200,800",
+    "thumbnail": "news-65.jpg"
+  },
+  {
+    "index": 66,
+    "url": "https://www.globenewswire.com/en/news-release/2021/05/27/2237661/0/en/Holberton-School-Named-to-GSV-EdTech-150.html",
+    "publication": "GlobeNewsWire",
+    "date": "2021-05-27",
+    "title": "Holberton School Named to GSV EdTech 150",
+    "og_image": "https://ml.globenewswire.com/Resource/Download/3fe1ca81-9f86-4d3e-aa2f-407e890c66bc",
+    "thumbnail": "news-66.jpg"
+  },
+  {
+    "index": 67,
+    "url": "https://www.tipsclear.in/6-strategies-for-running-more-effective-startup-board-meetings-cleartips/",
+    "publication": "TipsClear",
+    "date": null,
+    "title": "6 Strategies for Running More Effective Startup Board Meetings",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 68,
+    "url": "https://www.forbes.com/sites/forbesbusinesscouncil/2021/09/21/15-ways-entrepreneurs-can-start-mitigating-the-impact-of-climate-change/",
+    "publication": "Forbes",
+    "date": "2021-09-21",
+    "title": "15 Ways Entrepreneurs Can Start Mitigating the Impact of Climate Change",
+    "og_image": null,
+    "thumbnail": null
+  },
+  {
+    "index": 69,
+    "url": "https://techcrunch.com/2022/07/13/african-leadership-group-acquires-coding-school-holberton/",
+    "publication": "TechCrunch",
+    "date": "2022-07-13",
+    "title": "African Leadership Group acquires coding school Holberton as it looks to train millions of new developers",
+    "og_image": "https://techcrunch.com/wp-content/uploads/2022/07/KHL-35-1.jpg?resize=1200,800",
+    "thumbnail": "news-69.jpg"
+  }
+]
