@@ -53,14 +53,10 @@ export function Hero() {
 
         {/* Profile photo with rotating glow */}
         <div className="shrink-0 sm:ml-auto">
-          <div className="relative w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48">
-            <div className="absolute -inset-[2px] rounded-2xl animate-spin-slow opacity-60" style={{
-              background: "conic-gradient(from 0deg, oklch(0.72 0.18 290), oklch(0.72 0.17 320), oklch(0.72 0.15 260), oklch(0.72 0.18 290))",
-            }} />
-            <div className="absolute -inset-[2px] rounded-2xl animate-spin-slow blur-md opacity-40" style={{
-              background: "conic-gradient(from 0deg, oklch(0.72 0.18 290), oklch(0.72 0.17 320), oklch(0.72 0.15 260), oklch(0.72 0.18 290))",
-            }} />
-            <div className="relative w-full h-full rounded-2xl overflow-hidden">
+          <div className="relative w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 group/photo">
+            {/* Rotating glow */}
+            <div className="absolute -inset-[10px] rounded-2xl rotating-glow blur-xl" />
+            <div className="relative w-full h-full rounded-2xl overflow-hidden bg-background">
               <Image
                 src="/sylvain-kalache.jpg"
                 alt="Sylvain Kalache"

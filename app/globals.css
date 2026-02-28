@@ -103,17 +103,44 @@
   .glow-accent:hover {
     box-shadow: 0 0 0 1px oklch(0.72 0.18 290 / 0.25), 0 8px 40px oklch(0.72 0.18 290 / 0.12);
   }
-  .animate-spin-slow {
-    animation: spin-slow 8s linear infinite;
-  }
   .animate-glow {
     animation: badge-glow 2.5s ease-in-out infinite;
   }
 }
 
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --glow-scale {
+  syntax: "<number>";
+  initial-value: 1;
+  inherits: false;
+}
+
+@keyframes rotate-glow {
+  0% { --glow-angle: 0deg; --glow-scale: 1; }
+  25% { --glow-scale: 1.05; }
+  50% { --glow-scale: 0.95; }
+  75% { --glow-scale: 1.03; }
+  100% { --glow-angle: 360deg; --glow-scale: 1; }
+}
+
+.rotating-glow {
+  animation: rotate-glow 12s ease-in-out infinite;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0%,
+    oklch(0.72 0.18 290 / 0.3) 8%,
+    oklch(0.78 0.17 320 / 0.5) 20%,
+    oklch(0.72 0.15 260 / 0.4) 45%,
+    oklch(0.72 0.18 290 / 0.2) 65%,
+    transparent 85%,
+    transparent 100%
+  );
+  scale: var(--glow-scale);
 }
 
 @keyframes badge-glow {
