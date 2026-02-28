@@ -26,7 +26,10 @@ export const metadata: Metadata = {
   title: 'Sylvain Kalache',
   description: 'DevRel & AI Labs lead at Rootly. Co-founded Holberton School. Helping SREs succeed with AI, Claude, and MCP through writing, speaking, and open-source.',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
