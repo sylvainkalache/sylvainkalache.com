@@ -1,4 +1,4 @@
-import { Github, Twitter, Youtube } from "lucide-react"
+import { Github, Twitter, Youtube, Mail } from "lucide-react"
 
 const links = [
   { icon: Github, href: "https://github.com/Rootly-AI-Labs", label: "GitHub" },
@@ -21,21 +21,30 @@ export function Footer() {
           </span>
         </div>
 
-        <ul className="flex items-center gap-4" role="list">
-          {links.map(({ icon: Icon, href, label }) => (
-            <li key={label}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
-              >
-                <Icon size={16} aria-hidden="true" />
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-3">
+          <ul className="flex items-center gap-4" role="list">
+            {links.map(({ icon: Icon, href, label }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+                >
+                  <Icon size={16} aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="mailto:sylvain@kalache.fr"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-mono font-medium text-muted-foreground bg-secondary hover:text-foreground hover:bg-secondary/80 transition-colors"
+          >
+            <Mail size={13} />
+            Contact
+          </a>
+        </div>
       </div>
     </footer>
   )

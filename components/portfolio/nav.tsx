@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Github, Twitter, Linkedin, Menu, X } from "lucide-react"
+import { Github, Twitter, Linkedin, Menu, X, Mail } from "lucide-react"
 
 const FULL_NAME = "sylvain"
 
@@ -89,22 +89,31 @@ export function Nav() {
           />
         </Link>
 
-        {/* Social icons */}
-        <ul className="hidden md:flex items-center gap-3" role="list">
-          {socialLinks.map(({ icon: Icon, href, label }) => (
-            <li key={label}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
-              >
-                <Icon size={16} />
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* Social icons + Contact */}
+        <div className="hidden md:flex items-center gap-3">
+          <ul className="flex items-center gap-3" role="list">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-8 h-8 flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+                >
+                  <Icon size={16} />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="mailto:sylvain@kalache.fr"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-mono font-medium text-muted-foreground bg-secondary hover:text-foreground hover:bg-secondary/80 transition-colors"
+          >
+            <Mail size={13} />
+            Contact
+          </a>
+        </div>
 
         {/* Mobile menu toggle */}
         <button
@@ -120,21 +129,30 @@ export function Nav() {
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 pb-6 pt-2">
-          <ul className="flex items-center gap-4" role="list">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Icon size={18} />
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-4">
+            <ul className="flex items-center gap-4" role="list">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Icon size={18} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="mailto:sylvain@kalache.fr"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-mono font-medium text-accent-foreground bg-accent hover:bg-accent/80 transition-colors ml-auto"
+            >
+              <Mail size={13} />
+              Contact
+            </a>
+          </div>
         </div>
       )}
     </header>
