@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -15,10 +15,13 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  themeColor: '#141414',
+}
+
 export const metadata: Metadata = {
   title: 'Sylvain Kalache',
   description: 'DevRel & AI Labs lead at Rootly. Co-founded Holberton School. Helping SREs succeed with AI, Claude, and MCP through writing, speaking, and open-source.',
-  themeColor: '#141414',
   openGraph: {
     title: 'Sylvain Kalache',
     description: 'DevRel & AI Labs lead at Rootly. Helping SREs succeed with AI, Claude, and MCP.',

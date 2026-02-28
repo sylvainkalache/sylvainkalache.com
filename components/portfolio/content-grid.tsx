@@ -148,20 +148,26 @@ export function ContentGrid() {
                 <ChevronLeft size={14} />
               </button>
 
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
-                <button
-                  key={p}
-                  onClick={() => { setPage(p); window.scrollTo({ top: document.getElementById("work")?.offsetTop ?? 0, behavior: "smooth" }) }}
-                  className={cn(
-                    "w-8 h-8 flex items-center justify-center rounded-md text-xs font-mono transition-all",
-                    p === page
-                      ? "bg-foreground text-background"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary",
-                  )}
-                >
-                  {p}
-                </button>
-              ))}
+              <span className="font-mono text-xs text-muted-foreground sm:hidden">
+                {page} / {totalPages}
+              </span>
+
+              <div className="hidden sm:flex items-center gap-2">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
+                  <button
+                    key={p}
+                    onClick={() => { setPage(p); window.scrollTo({ top: document.getElementById("work")?.offsetTop ?? 0, behavior: "smooth" }) }}
+                    className={cn(
+                      "w-8 h-8 flex items-center justify-center rounded-md text-xs font-mono transition-all",
+                      p === page
+                        ? "bg-foreground text-background"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary",
+                    )}
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
 
               <button
                 onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: document.getElementById("work")?.offsetTop ?? 0, behavior: "smooth" }) }}
