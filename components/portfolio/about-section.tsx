@@ -17,7 +17,7 @@ const stats = [
   { value: "45+",  label: "Published articles" },
   { value: "59",   label: "Press features & mentions" },
   { value: "58",   label: "Podcast episodes" },
-  { value: "4",    label: "Open-source AI projects" },
+  { value: "4",    label: "Open-source projects" },
 ]
 
 export function AboutSection() {
@@ -64,7 +64,7 @@ export function AboutSection() {
                 Holberton School
               </a>
               , a venture-backed developer education startup that trained thousands of software engineers
-              across 10+ countries, backed by Jeff Weiner, Jerry Yang, and Solomon Hykes. Before that,
+              across 25 countries, backed by Jeff Weiner, Jerry Yang, and Solomon Hykes. Before that,
               senior SRE at LinkedIn, where I co-designed a patented self-healing infrastructure.
             </p>
             <p>

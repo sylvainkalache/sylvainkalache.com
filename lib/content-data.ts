@@ -637,7 +637,7 @@ export const contentItems: ContentItem[] = [
     date: "2026-02-11",
     url: "https://lu.ma/j72xad3n",
     publication: "OpenClaw",
-    thumbnail: "/thumbnails/luma-openclaw.png",
+    thumbnail: "/thumbnails/openclaw-demo.jpg",
   },
   {
     id: "t1",

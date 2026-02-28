@@ -35,18 +35,15 @@ export function Hero() {
           {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-5">
             {/* Small photo on mobile, hidden on sm+ */}
-            <div className="relative w-10 h-10 sm:hidden shrink-0">
-              <div className="absolute -inset-[4px] rounded-full rotating-glow blur-sm" />
-              <div className="relative w-full h-full rounded-full overflow-hidden">
-                <Image
-                  src="/sylvain-kalache.jpg"
-                  alt="Sylvain Kalache"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-cover object-top"
-                  priority
-                />
-              </div>
+            <div className="w-10 h-10 sm:hidden shrink-0 rounded-full overflow-hidden border border-border">
+              <Image
+                src="/sylvain-kalache.jpg"
+                alt="Sylvain Kalache"
+                width={40}
+                height={40}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
             </div>
             <p className="font-mono text-xs text-accent tracking-widest uppercase">
               sylvain kalache
@@ -62,7 +59,7 @@ export function Hero() {
           {/* Bio */}
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl text-pretty">
             DevRel and AI Labs lead at Rootly. Former Senior SRE at LinkedIn.
-            Co-founded Holberton School, which trained thousands of engineers across 10+ countries.
+            Co-founded Holberton School, which trained thousands of engineers across 25 countries.
             I write, speak, and build communities around AI for reliability engineering.
           </p>
         </div>

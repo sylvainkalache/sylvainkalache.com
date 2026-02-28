@@ -1,9 +1,8 @@
-import { Github, Twitter, Youtube, Mail } from "lucide-react"
+import { Github, Twitter, Mail } from "lucide-react"
 
 const links = [
   { icon: Github, href: "https://github.com/Rootly-AI-Labs", label: "GitHub" },
   { icon: Twitter, href: "https://x.com/sylvainkalache", label: "X / Twitter" },
-  { icon: Youtube, href: "https://www.youtube.com/@sylvainkalache", label: "YouTube" },
 ]
 
 export function Footer() {
