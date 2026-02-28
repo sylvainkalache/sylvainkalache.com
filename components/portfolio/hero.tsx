@@ -53,7 +53,7 @@ export function Hero() {
 
         {/* Profile photo */}
         <div className="shrink-0 sm:ml-auto">
-          <div className="w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border border-neutral-600">
+          <div className="w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border border-border">
             <Image
               src="/sylvain-kalache.jpg"
               alt="Sylvain Kalache"
