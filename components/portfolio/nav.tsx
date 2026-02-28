@@ -31,22 +31,6 @@ function useTypewriter(text: string, speed = 80, startDelay = 400) {
   return { displayed, done }
 }
 
-const navLinks = [
-  { label: "Writing", href: "#work" },
-  { label: "Talks", href: "#work" },
-  { label: "About", href: "#about" },
-]
-
-function scrollTo(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
-  e.preventDefault()
-  const id = href.replace("#", "")
-  const el = document.getElementById(id)
-  if (el) {
-    const top = el.getBoundingClientRect().top + window.scrollY - 72
-    window.scrollTo({ top, behavior: "smooth" })
-  }
-}
-
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/sylvainkalache/", label: "LinkedIn" },
   { icon: Github, href: "https://github.com/Rootly-AI-Labs", label: "GitHub" },
@@ -87,7 +71,7 @@ export function Nav() {
       }`}
     >
       <nav
-        className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between"
+        className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between"
         aria-label="Main navigation"
       >
         {/* Logo / Name */}
@@ -104,21 +88,6 @@ export function Nav() {
             aria-hidden="true"
           />
         </Link>
-
-        {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8" role="list">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                onClick={(e) => scrollTo(e, link.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
 
         {/* Social icons */}
         <ul className="hidden md:flex items-center gap-3" role="list">
@@ -151,19 +120,6 @@ export function Nav() {
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 pb-6 pt-2">
-          <ul className="flex flex-col gap-4 mb-6" role="list">
-            {navLinks.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
-                  onClick={(e) => { scrollTo(e, link.href); setMobileOpen(false) }}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
           <ul className="flex items-center gap-4" role="list">
             {socialLinks.map(({ icon: Icon, href, label }) => (
               <li key={label}>

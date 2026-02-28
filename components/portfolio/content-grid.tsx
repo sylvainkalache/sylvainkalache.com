@@ -49,6 +49,7 @@ export function ContentGrid() {
       )
     }
     return [...items].sort((a, b) => {
+      if (a.upcoming !== b.upcoming) return a.upcoming ? -1 : 1
       if (a.featured !== b.featured) return a.featured ? -1 : 1
       return new Date(b.date).getTime() - new Date(a.date).getTime()
     })
@@ -61,7 +62,7 @@ export function ContentGrid() {
   const paged = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
 
   return (
-    <section id="work" className="max-w-6xl mx-auto px-6 py-16">
+    <section id="work" className="max-w-7xl mx-auto px-6 py-16">
       {/* Section label */}
       <div className="flex items-center gap-3 mb-8">
         <span className="font-mono text-xs text-accent tracking-widest uppercase">./work</span>
@@ -109,7 +110,7 @@ export function ContentGrid() {
 
       {/* Grid */}
       {paged.length > 0 ? (
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {paged.map((item, i) => (
             <FadeInTile key={item.id} delay={Math.min(i, 5) * 80}>
               <ContentTile item={item} />

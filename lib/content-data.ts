@@ -13,6 +13,7 @@ export interface ContentItem {
   stars?: number
   language?: string
   featured?: boolean
+  upcoming?: boolean
 }
 
 // ── Publication logos (local) ─────────────────────────────────────────────────
@@ -153,6 +154,7 @@ export const contentItems: ContentItem[] = [
     description:
       "Breaking down the Model Context Protocol (MCP) and Agent-to-Agent (A2A) standards — why interoperability matters for the next wave of AI agents.",
     date: "2025-05-21",
+    featured: true,
     url: "https://thenewstack.io/why-are-agent-protocols-like-mcp-and-a2a-needed/",
     publication: "The New Stack",
     publicationIcon: TNS,
@@ -417,6 +419,7 @@ export const contentItems: ContentItem[] = [
   {
     id: "ld1",
     category: "article",
+    featured: true,
     title: "Is AI-assisted coding an incident magnet?",
     description:
       "AI-generated code ships faster but introduces subtle bugs that are harder to trace. What engineering leaders need to know about the reliability trade-offs.",
@@ -603,6 +606,18 @@ export const contentItems: ContentItem[] = [
 
   // ── Talks ──────────────────────────────────────────────────────────────────
   {
+    id: "t-google-sre-nyc",
+    category: "talk",
+    title: "Google SRE NYC Tech Talk — On-Call Burnout & On-Call Health",
+    description:
+      "The science behind responder overload and introducing On-Call Health, an open-source tool for detecting incident responder fatigue. At Google NYC Pier 57.",
+    date: "2026-03-10",
+    url: "https://www.meetup.com/new-york-site-reliability-engineering-tech-talks/events/313566093/",
+    publication: "Google SRE NYC",
+    thumbnail: "/thumbnails/google-SRE-events.png",
+    upcoming: true,
+  },
+  {
     id: "t-aisec",
     category: "talk",
     title: "AI Security Demo Night w/ Rootly AI, Okta, Panther, Tailscale & More",
@@ -740,6 +755,30 @@ export const contentItems: ContentItem[] = [
 
   // ── Panel Moderation ────────────────────────────────────────────────────────
   {
+    id: "p-dev-renaissance",
+    category: "panel",
+    title: "How AI is Fueling the Developer Renaissance",
+    description:
+      "Panel at the AWS GenAI Loft with leaders from a16z, AWS, Dagger, Braintrust, Baseten, and Arize AI on how AI is transforming developer workflows.",
+    date: "2025-06-05",
+    url: "https://lu.ma/ki58hev3",
+    publication: "Rootly AI Labs",
+    publicationIcon: ROOTLY,
+    thumbnail: "/thumbnails/ACR_2588.jpg",
+  },
+  {
+    id: "p-mcps",
+    category: "panel",
+    title: "MCPs and the Next Wave of Reliability w/ Rootly AI, WorkOS, Block, Microsoft & Groq",
+    description:
+      "Panel at the AWS GenAI Loft in San Francisco on MCPs, incident automation, observability, and generative AI tooling for reliability.",
+    date: "2025-08-28",
+    url: "https://lu.ma/fucyjy7f",
+    publication: "Rootly AI Labs",
+    publicationIcon: ROOTLY,
+    thumbnail: "/thumbnails/luma-mcps-reliability.jpg",
+  },
+  {
     id: "p-frontiers",
     category: "panel",
     title: "Frontiers of AI: Building with Rootly AI, Zscaler, CircleCI, Fireworks AI & Google DeepMind",
@@ -824,18 +863,6 @@ export const contentItems: ContentItem[] = [
     publication: "The Landscape",
     publicationIcon: LANDSCAPE,
     thumbnail: "/thumbnails/tl-k8s-security.jpg",
-  },
-  {
-    id: "tl2",
-    category: "podcast",
-    title: "Metal3 Graduating to Incubating",
-    description:
-      "Metal3 brings bare-metal provisioning to Kubernetes. What its CNCF incubation means for on-prem and edge deployments.",
-    date: "2025-11-24",
-    url: "https://thelandsca.pe/2025/11/24/metal3-graduating-to-incubating/",
-    publication: "The Landscape",
-    publicationIcon: LANDSCAPE,
-    thumbnail: "/thumbnails/tl-metal3.jpg",
   },
   {
     id: "tl3",
@@ -1578,7 +1605,7 @@ export const categories: { id: ContentCategory; label: string; count: number }[]
   { id: "article", label: "Writing", count: contentItems.filter((i) => i.category === "article").length },
   { id: "talk", label: "Talks", count: contentItems.filter((i) => i.category === "talk").length },
   { id: "podcast", label: "Podcasts", count: contentItems.filter((i) => i.category === "podcast").length },
-  { id: "github", label: "GitHub", count: contentItems.filter((i) => i.category === "github").length },
+  { id: "github", label: "Projects", count: contentItems.filter((i) => i.category === "github").length },
   { id: "panel", label: "Panel Moderation", count: contentItems.filter((i) => i.category === "panel").length },
   { id: "news", label: "In the News", count: contentItems.filter((i) => i.category === "news").length },
 ]

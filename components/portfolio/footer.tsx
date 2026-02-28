@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border mt-8">
-      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-col items-center sm:items-start gap-1">
           <span className="font-mono text-sm text-foreground">
             <span className="text-accent">~/</span>sylvain

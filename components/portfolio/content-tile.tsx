@@ -109,6 +109,9 @@ export function ContentTile({ item }: { item: ContentItem }) {
           className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
 
+        {/* Dark overlay to unify thumbnails */}
+        <div className="absolute inset-0 bg-black/15 group-hover:bg-black/0 transition-colors duration-300 pointer-events-none" aria-hidden="true" />
+
         {/* Bottom gradient into card */}
         <div
           className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
@@ -117,7 +120,7 @@ export function ContentTile({ item }: { item: ContentItem }) {
         />
 
         {/* Category badge — top left */}
-        <div className="absolute top-3 left-3 z-10">
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5">
           <span className={cn(
             "inline-flex items-center gap-1.5 px-2 py-1 rounded-lg text-[11px] font-mono font-medium",
             "backdrop-blur-md bg-black/60 border border-white/10",
@@ -126,6 +129,11 @@ export function ContentTile({ item }: { item: ContentItem }) {
             <Icon size={11} aria-hidden="true" />
             {config.label}
           </span>
+          {item.upcoming && (
+            <span className="inline-flex items-center px-2 py-1 rounded-lg text-[11px] font-mono font-medium backdrop-blur-md bg-accent/80 text-background border border-accent/30 animate-glow">
+              Upcoming
+            </span>
+          )}
         </div>
 
         {/* Publication icon — bottom right */}

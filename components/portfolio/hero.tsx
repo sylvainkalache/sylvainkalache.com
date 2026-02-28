@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col justify-center px-6 pt-20 pb-10 sm:pt-24 sm:pb-12 max-w-6xl mx-auto"
+      className="relative flex flex-col justify-center px-6 pt-20 pb-10 sm:pt-24 sm:pb-12 max-w-7xl mx-auto"
       aria-label="Introduction"
     >
       {/* Dot grid */}
@@ -36,14 +36,14 @@ export function Hero() {
 
         {/* Headline */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6 text-balance">
-          Helping SRE teams{" "}
+          Helping SREs{" "}
           <span className="text-muted-foreground font-normal">succeed with AI.</span>
         </h1>
 
         {/* Bio */}
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl text-pretty">
-          DevRel and AI Labs lead at Rootly. Co-founded Holberton School,
-          which trained thousands of engineers across 10+ countries.
+          DevRel and AI Labs lead at Rootly. Former Senior SRE at LinkedIn.
+          Co-founded Holberton School, which trained thousands of engineers across 10+ countries.
           I write, speak, and build communities around AI for reliability engineering.
         </p>
       </div>

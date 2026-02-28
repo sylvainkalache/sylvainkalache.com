@@ -27,7 +27,7 @@ export function AboutSection() {
     <section
       id="about"
       ref={ref}
-      className={cn("max-w-6xl mx-auto px-6 py-24 border-t border-border", cls)}
+      className={cn("max-w-7xl mx-auto px-6 py-24 border-t border-border", cls)}
     >
       <div className="flex items-center gap-3 mb-12">
         <span className="font-mono text-xs text-accent tracking-widest uppercase">./about</span>
@@ -51,8 +51,7 @@ export function AboutSection() {
               >
                 AI Labs at Rootly
               </a>
-              , where I run research collaborations with Anthropic, Google DeepMind, and Google Cloud —
-              shipping open-source AI agents and MCP integrations that help SRE teams work with AI.
+              , building open-source tools and research to advance reliability engineering in the AI era.
             </p>
             <p>
               Previously co-founded{" "}

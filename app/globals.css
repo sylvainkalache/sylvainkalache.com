@@ -102,4 +102,12 @@
   .glow-accent:hover {
     box-shadow: 0 0 0 1px oklch(0.72 0.18 290 / 0.25), 0 8px 40px oklch(0.72 0.18 290 / 0.12);
   }
+  .animate-glow {
+    animation: badge-glow 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 4px oklch(0.72 0.18 290 / 0.2); opacity: 0.4; transform: scale(1); }
+  50% { box-shadow: 0 0 30px 10px oklch(0.72 0.18 290 / 0.9), 0 0 10px oklch(0.72 0.18 290 / 0.7) inset; opacity: 1; transform: scale(1.08); }
 }

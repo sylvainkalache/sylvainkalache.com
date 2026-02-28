@@ -98,7 +98,7 @@ export function FilterBar({ active, onChange, publications, activePublication, o
                   "inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 border",
                   activePublication === pub.name
                     ? "bg-accent/15 border-accent/40"
-                    : "bg-transparent border-border hover:border-foreground/40 hover:bg-secondary/50"
+                    : "bg-neutral-600 border-border hover:border-foreground/40 hover:bg-neutral-500"
                 )}
               >
                 <span className="flex items-center justify-center w-[80px] h-5">
