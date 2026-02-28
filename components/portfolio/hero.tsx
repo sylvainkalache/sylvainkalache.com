@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export function Hero() {
   return (
     <section
@@ -28,24 +30,40 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 max-w-3xl">
-        {/* Eyebrow */}
-        <p className="font-mono text-xs text-accent tracking-widest uppercase mb-5">
-          sylvain kalache
-        </p>
+      <div className="relative z-10 flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <p className="font-mono text-xs text-accent tracking-widest uppercase mb-5">
+            sylvain kalache
+          </p>
 
-        {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6 text-balance">
-          Helping SREs{" "}
-          <span className="text-muted-foreground font-normal">succeed with AI.</span>
-        </h1>
+          {/* Headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6 text-balance">
+            Helping SREs{" "}
+            <span className="text-muted-foreground font-normal">succeed with AI.</span>
+          </h1>
 
-        {/* Bio */}
-        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl text-pretty">
-          DevRel and AI Labs lead at Rootly. Former Senior SRE at LinkedIn.
-          Co-founded Holberton School, which trained thousands of engineers across 10+ countries.
-          I write, speak, and build communities around AI for reliability engineering.
-        </p>
+          {/* Bio */}
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl text-pretty">
+            DevRel and AI Labs lead at Rootly. Former Senior SRE at LinkedIn.
+            Co-founded Holberton School, which trained thousands of engineers across 10+ countries.
+            I write, speak, and build communities around AI for reliability engineering.
+          </p>
+        </div>
+
+        {/* Profile photo */}
+        <div className="shrink-0 sm:ml-auto">
+          <div className="w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border border-neutral-600">
+            <Image
+              src="/sylvain-kalache.jpg"
+              alt="Sylvain Kalache"
+              width={192}
+              height={192}
+              className="w-full h-full object-cover object-top"
+              priority
+            />
+          </div>
+        </div>
       </div>
     </section>
   )

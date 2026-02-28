@@ -25,6 +25,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Sylvain Kalache',
   description: 'DevRel & AI Labs lead at Rootly. Co-founded Holberton School. Helping SREs succeed with AI, Claude, and MCP through writing, speaking, and open-source.',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Sylvain Kalache',
     description: 'DevRel & AI Labs lead at Rootly. Helping SREs succeed with AI, Claude, and MCP.',
