@@ -10,10 +10,31 @@ export interface ContentItem {
   publication?: string
   publicationIcon?: string
   thumbnail: string
-  stars?: number
-  language?: string
   featured?: boolean
   upcoming?: boolean
+  // Enriched metadata
+  topics?: string[]
+  tldr?: string
+  funFact?: string
+  role?: "author" | "speaker" | "moderator" | "host" | "guest" | "subject"
+  // Article-specific
+  wordCount?: number
+  readingTime?: number
+  // Audio/video-specific
+  duration?: number
+  // Talk/panel-specific
+  city?: string
+  venue?: string
+  conference?: string
+  eventLink?: string
+  videoLink?: string
+  coParticipants?: { company: string; name: string }[]
+  // GitHub-specific
+  stars?: number
+  language?: string
+  techStack?: string[]
+  // News-specific
+  journalist?: string
 }
 
 // ── Publication logos (local) ─────────────────────────────────────────────────
@@ -59,6 +80,11 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/paas-12factor.jpg",
+    role: "author",
+    wordCount: 1315,
+    readingTime: 7,
+    topics: ["Platform Engineering", "Cloud Native", "Containers"],
+    tldr: "PaaS can handle far more than 12-factor apps if teams adopt workload-type APIs that match deployment patterns to application needs.",
   },
   {
     id: "tc2",
@@ -71,6 +97,11 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/kubernetes-data.jpg",
+    role: "author",
+    wordCount: 1277,
+    readingTime: 7,
+    topics: ["Kubernetes", "Data on Kubernetes", "Cloud Native"],
+    tldr: "Running stateful workloads on Kubernetes requires mastering operators, storage classes, StatefulSets, and Day 2 operational practices.",
   },
   {
     id: "tc3",
@@ -83,6 +114,11 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/board-meetings.jpg",
+    role: "author",
+    wordCount: 796,
+    readingTime: 4,
+    topics: ["Community Building", "Developer Education"],
+    tldr: "Board meetings become valuable when founders communicate between sessions, use two-deck formats, and debrief their teams afterward.",
   },
   {
     id: "tc4",
@@ -95,6 +131,11 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/ml-labeled-data.jpg",
+    role: "author",
+    wordCount: 1004,
+    readingTime: 6,
+    topics: ["Machine Learning", "AI Agents", "Developer Tools"],
+    tldr: "The real competitive moat in ML is not the model but the quality and scale of your labeled training data pipeline.",
   },
   {
     id: "tc5",
@@ -107,6 +148,11 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/tc-education-ai.jpg",
+    role: "author",
+    wordCount: 843,
+    readingTime: 5,
+    topics: ["Developer Education", "Machine Learning", "EdTech"],
+    tldr: "Education should adopt AI-style personalization with adaptive learning paths and competency-based assessment instead of one-size-fits-all curricula.",
   },
 
   // ── Articles — The New Stack ───────────────────────────────────────────────
@@ -121,6 +167,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-llms-runbook.jpg",
+    role: "author",
+    wordCount: 918,
+    readingTime: 5,
+    topics: ["SRE", "Incident Management", "AI Agents"],
+    tldr: "LLM-generated code is outpacing traditional runbooks, forcing SRE teams to rethink incident response playbooks for non-deterministic systems.",
   },
   {
     id: "tns2",
@@ -133,6 +184,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-ai-platformcon.jpg",
+    role: "author",
+    wordCount: 778,
+    readingTime: 4,
+    topics: ["Platform Engineering", "AI Agents", "Developer Tools"],
+    tldr: "Three PlatformCon signals show AI is reshaping internal developer platforms from copilots to autonomous agents handling infrastructure tasks.",
   },
   {
     id: "tns3",
@@ -146,6 +202,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-vibe-coding.jpg",
+    role: "author",
+    wordCount: 929,
+    readingTime: 5,
+    topics: ["AI Agents", "Developer Tools", "SRE"],
+    tldr: "Vibe coding democratizes development but risks creating hard-to-debug production issues that overwhelm lean SRE teams.",
   },
   {
     id: "tns4",
@@ -159,6 +220,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-agent-protocols.jpg",
+    role: "author",
+    wordCount: 1102,
+    readingTime: 6,
+    topics: ["MCP", "AI Agents", "Developer Tools"],
+    tldr: "MCP and A2A protocols are essential for AI agent interoperability, preventing vendor lock-in and enabling composable agent architectures.",
   },
   {
     id: "tns5",
@@ -171,6 +237,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-incident-vibing.jpg",
+    role: "author",
+    wordCount: 861,
+    readingTime: 5,
+    topics: ["SRE", "Incident Management", "AI Agents"],
+    tldr: "When developers vibe-code, SREs end up incident-vibing through outages caused by AI-generated code nobody fully understands.",
   },
   {
     id: "tns6",
@@ -183,6 +254,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-postgresql.jpg",
+    role: "author",
+    wordCount: 615,
+    readingTime: 4,
+    topics: ["PostgreSQL", "Kubernetes", "Cloud Native"],
+    tldr: "Three cloud native PostgreSQL deployment approaches each suit different maturity levels: operators, managed services, and hybrid models.",
   },
   {
     id: "tns7",
@@ -195,6 +271,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-backstage.jpg",
+    role: "author",
+    wordCount: 797,
+    readingTime: 4,
+    topics: ["Platform Engineering", "Kubernetes", "Developer Tools"],
+    tldr: "Backstage can unify Cloud Foundry and Kubernetes clusters into a single developer portal, reducing cognitive overhead for platform teams.",
   },
   {
     id: "tns8",
@@ -207,6 +288,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-argo-buildpacks.jpg",
+    role: "author",
+    wordCount: 753,
+    readingTime: 4,
+    topics: ["CI/CD", "Buildpacks", "Cloud Native"],
+    tldr: "Combining Argo Workflows with Cloud Native Buildpacks eliminates Dockerfile maintenance and creates repeatable CI/CD pipelines.",
   },
   {
     id: "tns9",
@@ -219,6 +305,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-container-build.jpg",
+    role: "author",
+    wordCount: 937,
+    readingTime: 5,
+    topics: ["Containers", "CI/CD", "Buildpacks"],
+    tldr: "Faster container builds come from multi-stage builds, better layer caching, and reproducible build environments across dev and CI.",
   },
   {
     id: "tns10",
@@ -231,6 +322,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-apm-buildpacks.jpg",
+    role: "author",
+    wordCount: 570,
+    readingTime: 3,
+    topics: ["Buildpacks", "Observability", "Cloud Native"],
+    tldr: "Buildpacks can embed APM agents at build time, giving teams production observability without touching application code.",
   },
   {
     id: "tns11",
@@ -243,6 +339,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-korifi.jpg",
+    role: "author",
+    wordCount: 1126,
+    readingTime: 6,
+    topics: ["Kubernetes", "Cloud Native", "Platform Engineering"],
+    tldr: "Korifi brings Cloud Foundry's simple cf-push developer experience to Kubernetes for polyglot application deployments.",
   },
   {
     id: "tns12",
@@ -255,6 +356,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-paketo-python.jpg",
+    role: "author",
+    wordCount: 841,
+    readingTime: 5,
+    topics: ["Buildpacks", "Containers", "Developer Tools"],
+    tldr: "Paketo Buildpacks containerize Python apps without Dockerfiles, handling dependencies and runtime configuration automatically.",
   },
   {
     id: "tns13",
@@ -267,6 +373,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-dockerfiles.jpg",
+    role: "author",
+    wordCount: 726,
+    readingTime: 4,
+    topics: ["Containers", "Security", "CI/CD"],
+    tldr: "Better Dockerfiles start with multi-stage builds, layer caching strategies, security scanning, and image size optimization.",
   },
   {
     id: "tns14",
@@ -279,6 +390,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-shift-left.jpg",
+    role: "author",
+    wordCount: 832,
+    readingTime: 5,
+    topics: ["Kubernetes", "CI/CD", "DevOps"],
+    tldr: "Validating Kubernetes configs earlier in the development cycle catches misconfigurations before they cause production incidents.",
   },
   {
     id: "tns15",
@@ -291,6 +407,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-stateful-k8s.jpg",
+    role: "author",
+    wordCount: 812,
+    readingTime: 5,
+    topics: ["Kubernetes", "Data on Kubernetes", "Cloud Native"],
+    tldr: "Stateful workloads on Kubernetes are viable but require mastering operators, persistent volumes, and Day 2 operational patterns.",
   },
   {
     id: "tns16",
@@ -303,6 +424,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-ai-commodity.jpg",
+    role: "author",
+    wordCount: 625,
+    readingTime: 4,
+    topics: ["Machine Learning", "DevOps", "CI/CD"],
+    tldr: "As AI models commoditize, the competitive edge shifts to how fast teams iterate on data pipelines and deployment workflows.",
   },
   {
     id: "tns17",
@@ -315,6 +441,11 @@ export const contentItems: ContentItem[] = [
     publication: "The New Stack",
     publicationIcon: TNS,
     thumbnail: "/thumbnails/tns-mlops.jpg",
+    role: "author",
+    wordCount: 1620,
+    readingTime: 9,
+    topics: ["Machine Learning", "DevOps", "CI/CD"],
+    tldr: "MLOps applies DevOps principles to machine learning, covering model versioning, monitoring, retraining, and production lifecycle management.",
   },
 
   // ── Articles — VentureBeat ─────────────────────────────────────────────────
@@ -329,6 +460,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-mcp-focus.jpg",
+    role: "author",
+    wordCount: 1068,
+    readingTime: 6,
+    topics: ["MCP", "Developer Tools", "AI Agents"],
+    tldr: "MCP can reduce the 1,200 daily context switches developers face by unifying tool interactions through a single protocol layer.",
   },
   {
     id: "vb1",
@@ -341,6 +477,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-dev-bootcamp.jpg",
+    role: "author",
+    wordCount: 954,
+    readingTime: 5,
+    topics: ["Developer Education", "Workforce Development", "EdTech"],
+    tldr: "Dev Bootcamp's closure reveals that short-format coding bootcamps cannot sustainably bridge the gap between hype and real workforce outcomes.",
   },
   {
     id: "vb2",
@@ -353,6 +494,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-help-wanted.jpg",
+    role: "author",
+    wordCount: 709,
+    readingTime: 4,
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "Competency-based, project-driven training scales better and costs less than traditional degrees for building a tech-ready workforce.",
   },
   {
     id: "vb3",
@@ -365,6 +511,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-sv-training.jpg",
+    role: "author",
+    wordCount: 751,
+    readingTime: 4,
+    topics: ["Developer Education", "Diversity in Tech", "Workforce Development"],
+    tldr: "Silicon Valley leads in software innovation but has failed to build scalable, accessible pipelines for the next generation of engineers.",
   },
   {
     id: "vb4",
@@ -377,6 +528,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-tech-education.jpg",
+    role: "author",
+    wordCount: 888,
+    readingTime: 5,
+    topics: ["Developer Education", "EdTech", "Workforce Development"],
+    tldr: "Fixing tech education means addressing systemic access and pedagogy issues first, not layering more technology on top of broken systems.",
   },
   {
     id: "vb5",
@@ -389,6 +545,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-apprenticeships.jpg",
+    role: "author",
+    wordCount: 848,
+    readingTime: 5,
+    topics: ["Diversity in Tech", "Developer Education", "Workforce Development"],
+    tldr: "Apprenticeship models borrowed from traditional trades can create more diverse, accessible pathways into the tech industry.",
   },
   {
     id: "vb6",
@@ -401,6 +562,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-trump-jobs.jpg",
+    role: "author",
+    wordCount: 863,
+    readingTime: 5,
+    topics: ["Workforce Development", "Developer Education"],
+    tldr: "Automation makes old jobs obsolete; the focus should be on training workers for future roles rather than restoring vanished ones.",
   },
   {
     id: "vb7",
@@ -413,6 +579,11 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-amazon-jobs.jpg",
+    role: "author",
+    wordCount: 814,
+    readingTime: 5,
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "Amazon's 50,000-job hiring push exposes the shortage of trained engineers and the need for alternative education pathways at scale.",
   },
 
   // ── Articles — LeadDev ─────────────────────────────────────────────────────
@@ -428,6 +599,11 @@ export const contentItems: ContentItem[] = [
     publication: "LeadDev",
     publicationIcon: LEADDEV,
     thumbnail: "/thumbnails/leaddev-ai-coding.jpg",
+    role: "author",
+    wordCount: 1334,
+    readingTime: 7,
+    topics: ["SRE", "Incident Management", "AI Agents"],
+    tldr: "AI-generated code ships faster but introduces subtle, hard-to-trace bugs that increase incident frequency for engineering teams.",
   },
 
   // ── Articles — CNBC ────────────────────────────────────────────────────────
@@ -442,6 +618,11 @@ export const contentItems: ContentItem[] = [
     publication: "CNBC",
     publicationIcon: CNBC,
     thumbnail: "/thumbnails/cnbc-education.jpg",
+    role: "author",
+    wordCount: 1017,
+    readingTime: 6,
+    topics: ["Developer Education", "Workforce Development", "EdTech"],
+    tldr: "Free college misses the point; the real challenge is making higher education relevant, practical, and aligned with workforce needs.",
   },
 
   // ── Articles — Linux.com ───────────────────────────────────────────────────
@@ -456,6 +637,11 @@ export const contentItems: ContentItem[] = [
     publication: "Linux.com",
     publicationIcon: LINUX,
     thumbnail: "/thumbnails/linux-devops-students.jpg",
+    role: "author",
+    wordCount: 518,
+    readingTime: 3,
+    topics: ["DevOps", "SRE", "Developer Education"],
+    tldr: "Real-world on-call rotations teach DevOps students the value of monitoring, alerting, and system reliability through direct experience.",
   },
   {
     id: "lx2",
@@ -468,6 +654,11 @@ export const contentItems: ContentItem[] = [
     publication: "Linux.com",
     publicationIcon: LINUX,
     thumbnail: "/thumbnails/linux-devops-failed.jpg",
+    role: "author",
+    wordCount: 614,
+    readingTime: 4,
+    topics: ["DevOps", "Incident Management", "SRE"],
+    tldr: "A postmortem on a 60,000-user outage reveals how monitoring gaps and deployment shortcuts compound into major incidents.",
   },
   {
     id: "lx3",
@@ -480,6 +671,11 @@ export const contentItems: ContentItem[] = [
     publication: "Linux.com",
     publicationIcon: LINUX,
     thumbnail: "/thumbnails/linux-s3-server.jpg",
+    role: "author",
+    wordCount: 813,
+    readingTime: 5,
+    topics: ["Open Source", "Cloud Native", "Developer Tools"],
+    tldr: "You can run your own S3-compatible object storage server using open source tools for development, testing, or on-premises workloads.",
   },
   {
     id: "lx4",
@@ -492,6 +688,11 @@ export const contentItems: ContentItem[] = [
     publication: "Linux.com",
     publicationIcon: LINUX,
     thumbnail: "/thumbnails/linux-5-commands.jpg",
+    role: "author",
+    wordCount: 811,
+    readingTime: 5,
+    topics: ["SRE", "DevOps", "Developer Tools"],
+    tldr: "Five essential commands every sysadmin should run when SSH-ing into a Linux server to quickly assess system health.",
   },
   {
     id: "lx5",
@@ -504,6 +705,11 @@ export const contentItems: ContentItem[] = [
     publication: "Linux.com",
     publicationIcon: LINUX,
     thumbnail: "/thumbnails/linux-ubuntu-neyo.jpg",
+    role: "author",
+    wordCount: 412,
+    readingTime: 3,
+    topics: ["Developer Education", "Diversity in Tech", "Community Building"],
+    tldr: "A coding summer camp partnering Ubuntu and NE-YO introduced aspiring young engineers to open source and software development.",
   },
 
   // ── Articles — CloudNativeNow ──────────────────────────────────────────────
@@ -518,6 +724,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-kpack.jpg",
+    role: "author",
+    wordCount: 1279,
+    readingTime: 7,
+    topics: ["Kubernetes", "CI/CD", "Buildpacks"],
+    tldr: "kpack automates container image builds natively on Kubernetes, integrating seamlessly with CI/CD pipelines for continuous delivery.",
   },
   {
     id: "cnn2",
@@ -530,6 +741,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-container-lifecycle.jpg",
+    role: "author",
+    wordCount: 870,
+    readingTime: 5,
+    topics: ["Containers", "Cloud Native", "Security"],
+    tldr: "Effective container lifecycle management covers build, runtime, and decommission phases with security and compliance at every stage.",
   },
   {
     id: "cnn3",
@@ -542,6 +758,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-dependency-mgmt.jpg",
+    role: "author",
+    wordCount: 777,
+    readingTime: 4,
+    topics: ["Containers", "Security", "Cloud Native"],
+    tldr: "Keeping container dependencies and runtimes secure requires automated scanning, patching strategies, and reproducible build processes.",
   },
   {
     id: "cnn4",
@@ -554,6 +775,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-buildpacks-opt.jpg",
+    role: "author",
+    wordCount: 829,
+    readingTime: 5,
+    topics: ["Buildpacks", "Cloud Native", "Containers"],
+    tldr: "Advanced buildpack techniques optimize build times, ensure cross-cloud portability, and automate lifecycle updates for container images.",
   },
   {
     id: "cnn5",
@@ -566,6 +792,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-java-container.jpg",
+    role: "author",
+    wordCount: 642,
+    readingTime: 4,
+    topics: ["Buildpacks", "Containers", "Cloud Native"],
+    tldr: "Buildpacks simplify Java containerization by handling Dockerfile complexity automatically, letting developers focus on application code.",
   },
   {
     id: "cnn6",
@@ -578,6 +809,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-korifi.jpg",
+    role: "author",
+    wordCount: 596,
+    readingTime: 3,
+    topics: ["Kubernetes", "Platform Engineering", "Cloud Native"],
+    tldr: "Korifi brings Cloud Foundry's simple scaling experience to Kubernetes, letting developers scale apps without deep K8s expertise.",
   },
   {
     id: "cnn7",
@@ -590,6 +826,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-k8s-complexity.jpg",
+    role: "author",
+    wordCount: 786,
+    readingTime: 4,
+    topics: ["Kubernetes", "Platform Engineering", "Developer Tools"],
+    tldr: "Platform abstractions, developer self-service portals, and opinionated defaults are three ways to tame Kubernetes operational complexity.",
   },
   {
     id: "cnn8",
@@ -602,6 +843,11 @@ export const contentItems: ContentItem[] = [
     publication: "CloudNativeNow",
     publicationIcon: CNN,
     thumbnail: "/thumbnails/cnn-k8s-namespaces.jpg",
+    role: "author",
+    wordCount: 964,
+    readingTime: 5,
+    topics: ["Kubernetes", "Cloud Native", "Platform Engineering"],
+    tldr: "Kubernetes namespace limitations can be overcome with hierarchical namespaces, virtual clusters, and policy-based multi-tenancy patterns.",
   },
 
   // ── Talks ──────────────────────────────────────────────────────────────────
@@ -616,6 +862,12 @@ export const contentItems: ContentItem[] = [
     publication: "Google SRE NYC",
     thumbnail: "/thumbnails/google-SRE-events.png",
     upcoming: true,
+    role: "speaker",
+    city: "New York",
+    venue: "Google Pier 57",
+    conference: "Google SRE NYC Tech Talks",
+    topics: ["SRE", "Incident Management", "Open Source"],
+    tldr: "On-call burnout is measurable; On-Call Health is an open-source tool that detects early warning signs of incident responder fatigue.",
   },
   {
     id: "t-aisec",
@@ -627,6 +879,12 @@ export const contentItems: ContentItem[] = [
     url: "https://lu.ma/50gp38l1",
     publication: "AI Security Demo Night",
     thumbnail: "/thumbnails/luma-ai-security.jpg",
+    role: "speaker",
+    city: "San Francisco",
+    venue: "Okta HQ",
+    conference: "AI Security Demo Night",
+    topics: ["AI Agents", "Security", "Incident Management"],
+    tldr: "Live demos of Rootly AI alongside cybersecurity startups tackling identity, endpoint security, and AI-driven threat response.",
   },
   {
     id: "t0",
@@ -638,6 +896,11 @@ export const contentItems: ContentItem[] = [
     url: "https://lu.ma/j72xad3n",
     publication: "OpenClaw",
     thumbnail: "/thumbnails/openclaw-demo.jpg",
+    role: "speaker",
+    city: "Toronto",
+    conference: "OpenClaw Demo Night",
+    topics: ["AI Agents", "Incident Management", "Developer Tools"],
+    tldr: "Presenting Rootly AI at a Toronto demo night alongside Sentry, Convex, and DigitalOcean teams building AI-powered developer tools.",
   },
   {
     id: "t1",
@@ -650,6 +913,12 @@ export const contentItems: ContentItem[] = [
     publication: "SREcon EMEA 2025",
     publicationIcon: SRECON,
     thumbnail: "/thumbnails/srecon-talk-photo.png",
+    role: "speaker",
+    duration: 45,
+    city: "Dublin",
+    conference: "SREcon EMEA 2025",
+    topics: ["SRE", "AI Agents", "Incident Management"],
+    tldr: "AI-assisted coding accelerates shipping but introduces hard-to-trace LLM bugs and hallucinated dependencies that overwhelm lean SRE teams.",
   },
   {
     id: "t2",
@@ -662,6 +931,11 @@ export const contentItems: ContentItem[] = [
     publication: "PlatformCon",
     publicationIcon: PCON,
     thumbnail: "/thumbnails/yt-KPkiHBkAO3Y.jpg",
+    role: "speaker",
+    duration: 32,
+    conference: "PlatformCon",
+    topics: ["Platform Engineering", "AI Agents", "Developer Tools"],
+    tldr: "Beyond the hype, AI is concretely reshaping internal developer portals, self-service workflows, and platform team operations.",
   },
   {
     id: "t3",
@@ -674,6 +948,12 @@ export const contentItems: ContentItem[] = [
     publication: "DevOpsDays Austin",
     publicationIcon: DDAYS_ICON,
     thumbnail: "/thumbnails/yt-LzeeRjy-p9g.jpg",
+    role: "speaker",
+    duration: 5,
+    city: "Austin",
+    conference: "DevOpsDays Austin",
+    topics: ["Incident Management", "AI Agents", "SRE"],
+    tldr: "LLMs can assist with incident triage and RCA summarization but cannot yet reliably drive autonomous incident resolution.",
   },
   {
     id: "t4",
@@ -685,6 +965,11 @@ export const contentItems: ContentItem[] = [
     url: "https://www.youtube.com/live/uZsnfVZ8XCc",
     publication: "Platform Engineering",
     thumbnail: "/thumbnails/yt-uZsnfVZ8XCc.jpg",
+    role: "speaker",
+    duration: 51,
+    conference: "Platform Engineering",
+    topics: ["Platform Engineering", "AI Agents", "Developer Tools"],
+    tldr: "Canyon enables developer self-service through natural-language prompts for provisioning resources and troubleshooting infrastructure issues.",
   },
   {
     id: "t5",
@@ -696,6 +981,10 @@ export const contentItems: ContentItem[] = [
     url: "https://blog.holbertonschool.com/unesco-talk-life-long-learning-in-the-4th-industrial-revolution/",
     publication: "UNESCO",
     thumbnail: "/thumbnails/unesco-sylvain-kalache-holberton.jpg",
+    role: "speaker",
+    conference: "UNESCO International Youth Conference",
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "Education must shift from memorization to problem-solving and collaboration to prepare workers for the fourth industrial revolution.",
   },
   {
     id: "t6",
@@ -707,6 +996,11 @@ export const contentItems: ContentItem[] = [
     url: "https://www.sylvainkalache.com/",
     publication: "StartSe",
     thumbnail: "/thumbnails/startse-talk.jpg",
+    role: "speaker",
+    city: "São Paulo",
+    conference: "StartSe",
+    topics: ["Developer Education", "EdTech", "Workforce Development"],
+    tldr: "Project-based, peer-driven education models are better preparing the next generation of engineers for a rapidly changing world.",
   },
   {
     id: "t7",
@@ -718,6 +1012,11 @@ export const contentItems: ContentItem[] = [
     url: "https://vimeo.com/386315046",
     publication: "Inter-American Development Bank",
     thumbnail: "/thumbnails/idb-talk.png",
+    role: "speaker",
+    duration: 24,
+    conference: "Inter-American Development Bank",
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "Modern economies need skills-oriented pedagogy that values demonstrated competency over traditional academic credentials.",
   },
   {
     id: "t8",
@@ -729,6 +1028,11 @@ export const contentItems: ContentItem[] = [
     url: "https://www.sylvainkalache.com/",
     publication: "DockerCon",
     thumbnail: "/thumbnails/dockercon2019.png",
+    role: "speaker",
+    city: "San Francisco",
+    conference: "DockerCon 2019",
+    topics: ["Developer Education", "EdTech", "Community Building"],
+    tldr: "Alternative education models focused on peer learning and projects are reshaping the pipeline of software engineering talent.",
   },
   {
     id: "t9",
@@ -740,6 +1044,11 @@ export const contentItems: ContentItem[] = [
     url: "https://www.youtube.com/watch?v=0wGT3CLKTRg",
     publication: "Nexus",
     thumbnail: "/thumbnails/yt-0wGT3CLKTRg.jpg",
+    role: "speaker",
+    duration: 10,
+    conference: "Nexus",
+    topics: ["Developer Education", "EdTech"],
+    tldr: "The traditional CS degree model needs disruption through peer-learning and project-based curricula that mirror real engineering work.",
   },
   {
     id: "t10",
@@ -751,6 +1060,50 @@ export const contentItems: ContentItem[] = [
     url: "https://www.youtube.com/watch?v=nXD79-o5Uf4",
     publication: "ASU GSV Summit",
     thumbnail: "/thumbnails/yt-nXD79-o5Uf4.jpg",
+    role: "speaker",
+    duration: 50,
+    city: "San Diego",
+    conference: "ASU GSV Summit",
+    topics: ["Developer Education", "Workforce Development", "EdTech"],
+    tldr: "Lowering higher education costs is an economic imperative as the current model fails to deliver workforce-ready graduates at scale.",
+  },
+  {
+    id: "t-cspan",
+    category: "talk",
+    title: "Higher Education Innovation Summit",
+    description:
+      "Presenting at the U.S. Department of Education's Higher Education Innovation Summit on rethinking how we prepare students for the tech workforce.",
+    date: "2017-12-17",
+    url: "https://www.c-span.org/video/?438565-2/higher-education-innovation-summit-part-1",
+    publication: "C-SPAN",
+    thumbnail: "/thumbnails/education.png",
+    city: "Washington, D.C.",
+    venue: "U.S. Department of Education",
+    conference: "Higher Education Innovation Summit",
+    videoLink: "https://www.c-span.org/video/?438565-2/higher-education-innovation-summit-part-1",
+    role: "speaker",
+    topics: ["Developer Education", "Workforce Development", "EdTech"],
+    tldr: "Rethinking how higher education prepares students for the tech workforce through innovative, skills-oriented program models.",
+    coParticipants: [
+      { company: "Department of Education", name: "Betsy DeVos" },
+      { company: "Coursera", name: "Jeff Maggioncalda" },
+      { company: "MIT / edX", name: "Anant Agarwal" },
+      { company: "Minerva", name: "Ben Nelson" },
+      { company: "University Ventures", name: "Ryan Craig" },
+      { company: "College of the Ozarks", name: "Jerry C. Davis" },
+      { company: "Valencia College", name: "Kathleen Plinske" },
+      { company: "Osso VR", name: "Justin Barad" },
+      { company: "Capella Education Company", name: "Jillian Klein" },
+      { company: "Pennsylvania State University", name: "Vijay Krishna" },
+      { company: "University of Nebraska", name: "James Milliken" },
+      { company: "Skills Fund", name: "Rick O'Donnell" },
+      { company: "Burning Glass Technologies", name: "Matthew Sigelman" },
+      { company: "ASU Prep Digital", name: "Julie Young" },
+      { company: "Jack Welch Management Institute", name: "Mike Zeliff" },
+      { company: "Kansas Department of Commerce", name: "Diane DeBacker" },
+      { company: "Academy for Innovative Higher Education Leadership", name: "Jeffrey Selingo" },
+      { company: "Department of Education", name: "Kathleen Smith" },
+    ],
   },
 
   // ── Panel Moderation ────────────────────────────────────────────────────────
@@ -765,6 +1118,21 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly AI Labs",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/ACR_2588.jpg",
+    role: "moderator",
+    city: "San Francisco",
+    venue: "AWS GenAI Loft",
+    topics: ["AI Agents", "Developer Tools", "DevOps"],
+    tldr: "Leaders from a16z, Dagger, Braintrust, and Arize AI discuss how AI is concretely transforming developer workflows and tooling.",
+    coParticipants: [
+      { company: "a16z", name: "Yoko Li" },
+      { company: "Dagger", name: "Solomon Hykes" },
+      { company: "Dagger", name: "Sam Alba" },
+      { company: "Braintrust", name: "Jason Liu" },
+      { company: "Arize AI", name: "Aparna Dhinakaran" },
+      { company: "Baseten", name: "Amir Haghighat" },
+      { company: "Greptile", name: "Daksh Gupta" },
+      { company: "Hypermode", name: "Sam McCord" },
+    ],
   },
   {
     id: "p-mcps",
@@ -777,6 +1145,20 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly AI Labs",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/luma-mcps-reliability.jpg",
+    role: "moderator",
+    city: "San Francisco",
+    venue: "AWS GenAI Loft",
+    topics: ["MCP", "SRE", "Incident Management", "AI Agents"],
+    tldr: "MCPs are enabling a new wave of reliability tooling by connecting AI agents to incident management and observability systems.",
+    coParticipants: [
+      { company: "Groq", name: "Aarush Sah" },
+      { company: "Microsoft", name: "Harald Kirchner" },
+      { company: "Block", name: "Richard Moot" },
+      { company: "WorkOS", name: "Tobin South" },
+      { company: "Credo AI", name: "Navrina Singh" },
+      { company: "Alloy Automation", name: "Gregg Mojica" },
+      { company: "Upwind Security", name: "Gourav Nagar" },
+    ],
   },
   {
     id: "p-frontiers",
@@ -789,6 +1171,11 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly AI Labs",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/ACR_1257.jpg",
+    role: "moderator",
+    city: "San Francisco",
+    venue: "Google HQ",
+    topics: ["AI Agents", "Machine Learning", "SRE"],
+    tldr: "300+ attendees explored real-world Gemini models, reinforcement learning, and next-gen agent systems for AI reliability at Google HQ.",
   },
   {
     id: "p-rt-ai",
@@ -801,6 +1188,10 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/luma-rootly-ai-im.png",
+    role: "moderator",
+    city: "San Francisco",
+    topics: ["AI Agents", "Incident Management", "SRE"],
+    tldr: "Industry leaders separate practical AI applications in incident response from hype at this invite-only roundtable.",
   },
   {
     id: "p-rt-teams",
@@ -813,6 +1204,10 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/luma-rootly-central-dist.png",
+    role: "moderator",
+    city: "San Francisco",
+    topics: ["SRE", "Incident Management"],
+    tldr: "Centralized specialist responders vs. distributed on-call models each have trade-offs depending on organization size and maturity.",
   },
   {
     id: "p0",
@@ -825,6 +1220,10 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/luma-rootly-roundtable.png",
+    role: "moderator",
+    city: "San Francisco",
+    topics: ["Observability", "Incident Management", "SRE"],
+    tldr: "Filtering alert noise and enriching alerts with automated ownership context streamlines the path from weak signals to confident fixes.",
   },
   {
     id: "p1",
@@ -837,6 +1236,22 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly AI Labs",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/ACR_9054.jpg",
+    role: "moderator",
+    duration: 46,
+    city: "San Francisco",
+    venue: "GitHub Offices",
+    topics: ["MCP", "AI Agents", "SRE", "Developer Tools"],
+    tldr: "MCP servers and agent-to-agent communication are revolutionizing developer tools, with live demos from Anthropic, Sentry, and Postman.",
+    coParticipants: [
+      { company: "a16z", name: "Yoko Li" },
+      { company: "Google Cloud", name: "Miku Jha" },
+      { company: "Y Combinator", name: "Pete Koomen" },
+      { company: "Browserbase", name: "Paul Klein" },
+      { company: "Google Cloud", name: "Yemi Falokun" },
+      { company: "Postman", name: "Dustin Schau" },
+      { company: "Sentry", name: "Cody De Arkland" },
+      { company: "Anthropic", name: "Sophie Altchek" },
+    ],
   },
   {
     id: "p3",
@@ -849,6 +1264,29 @@ export const contentItems: ContentItem[] = [
     publication: "Rootly AI Labs",
     publicationIcon: ROOTLY,
     thumbnail: "/thumbnails/ACR_3322.jpg",
+    role: "moderator",
+    city: "San Francisco",
+    topics: ["AI Agents", "SRE", "Observability"],
+    tldr: "Leaders from NVIDIA, OpenAI, and Replit discuss how AI-driven automation and observability are reducing MTTR at scale.",
+  },
+  {
+    id: "p-dok-kubernetes",
+    category: "panel",
+    title: "The Future of Data on Kubernetes with Adobe and CNCF",
+    description:
+      "Panel with Joseph Sandoval and Xing Yang on the future of data on Kubernetes — storage, stateful workloads, and the evolving CNCF landscape.",
+    date: "2023-06-01",
+    url: "https://www.youtube.com/watch?v=XaxdGGGxQ-o",
+    publication: "Data on Kubernetes Community",
+    thumbnail: "/thumbnails/yt-XaxdGGGxQ-o.jpg",
+    role: "moderator",
+    duration: 17,
+    topics: ["Data on Kubernetes", "Kubernetes", "Cloud Native"],
+    tldr: "The future of data on Kubernetes involves better storage abstractions, operator maturity, and evolving CNCF governance for stateful workloads.",
+    coParticipants: [
+      { company: "Adobe", name: "Joseph Sandoval" },
+      { company: "VMware", name: "Xing Yang" },
+    ],
   },
 
   // ── Podcasts — The Landscape ───────────────────────────────────────────────
@@ -863,6 +1301,9 @@ export const contentItems: ContentItem[] = [
     publication: "The Landscape",
     publicationIcon: LANDSCAPE,
     thumbnail: "/thumbnails/tl-k8s-security.jpg",
+    role: "host",
+    topics: ["Kubernetes", "Security", "Cloud Native"],
+    tldr: "Half of Kubernetes clusters are running end-of-life versions and are about to lose critical security updates.",
   },
   {
     id: "tl3",
@@ -875,6 +1316,12 @@ export const contentItems: ContentItem[] = [
     publication: "The Landscape",
     publicationIcon: LANDSCAPE,
     thumbnail: "/thumbnails/kubernetes-134.png",
+    role: "host",
+    topics: ["Kubernetes", "Cloud Native", "Security"],
+    tldr: "Kubernetes 1.34 brings DRA GA for GPU workloads, mutating admission policies, and major API server performance improvements.",
+    coParticipants: [
+      { company: "Kubernetes", name: "Vyom Yadav" },
+    ],
   },
   {
     id: "tl5",
@@ -887,6 +1334,12 @@ export const contentItems: ContentItem[] = [
     publication: "The Landscape",
     publicationIcon: LANDSCAPE,
     thumbnail: "/thumbnails/harbor-podcast.jpg",
+    role: "host",
+    topics: ["Cloud Native", "Containers", "Open Source"],
+    tldr: "Harbor handles container image management, OCI artifact storage, disaster recovery replication, and increasingly AI model storage.",
+    coParticipants: [
+      { company: "Harbor", name: "Vadim Bauer" },
+    ],
   },
 
   // ── Podcasts — Adventures in DevOps ────────────────────────────────────────
@@ -901,6 +1354,9 @@ export const contentItems: ContentItem[] = [
     publication: "Adventures in DevOps",
     publicationIcon: AID,
     thumbnail: "/thumbnails/self-healing-systems.png",
+    role: "guest",
+    topics: ["SRE", "AI Agents", "MCP", "Incident Management"],
+    tldr: "From LinkedIn log ingestion to LLM-driven RCA, fine-tuning and MCP are enabling self-healing incident response systems.",
   },
 
   // ── Podcasts — Data Defenders Forum ────────────────────────────────────────
@@ -915,6 +1371,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-dora.jpg",
+    role: "host",
+    duration: 19,
+    topics: ["Security", "SRE"],
+    tldr: "DORA requires financial services firms to prove digital operational resilience through testing, reporting, and third-party risk management.",
   },
   {
     id: "ddf2",
@@ -927,6 +1387,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-election-security.jpg",
+    role: "host",
+    duration: 44,
+    topics: ["Security"],
+    tldr: "Election infrastructure security is evolving from paper ballots to digital systems, with data compliance playing an increasingly critical role.",
   },
   {
     id: "ddf3",
@@ -939,6 +1403,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-apra.jpg",
+    role: "host",
+    duration: 38,
+    topics: ["Security"],
+    tldr: "The American Privacy Rights Act would create a federal data privacy standard with broad implications for how tech companies handle user data.",
   },
   {
     id: "ddf4",
@@ -951,6 +1419,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-eu-ai-act.jpg",
+    role: "host",
+    duration: 36,
+    topics: ["AI Agents", "Security"],
+    tldr: "The EU AI Act classifies AI systems by risk level, with strict compliance timelines and requirements for high-risk AI-driven products.",
   },
   {
     id: "ddf5",
@@ -963,6 +1435,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-document-processing.jpg",
+    role: "host",
+    duration: 28,
+    topics: ["AI Agents", "Security"],
+    tldr: "AI-powered document processing systems must navigate compliance requirements that evolved from physical records to digital-first workflows.",
   },
   {
     id: "ddf6",
@@ -975,6 +1451,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-platform-security.jpg",
+    role: "host",
+    duration: 30,
+    topics: ["Platform Engineering", "Security"],
+    tldr: "Platform engineering teams should embed security and compliance into internal developer platforms from day one, not bolt it on later.",
   },
   {
     id: "ddf7",
@@ -987,6 +1467,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-compliance-advantage.jpg",
+    role: "host",
+    duration: 42,
+    topics: ["Security"],
+    tldr: "Forward-thinking companies turn data security and compliance from a cost center into a competitive business advantage.",
   },
   {
     id: "ddf8",
@@ -999,6 +1483,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-llms-security.jpg",
+    role: "host",
+    duration: 26,
+    topics: ["AI Agents", "Security"],
+    tldr: "LLMs introduce unique data security challenges spanning training data provenance, prompt injection risks, and inference output compliance.",
   },
   {
     id: "ddf9",
@@ -1011,6 +1499,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-us-saas-europe.jpg",
+    role: "host",
+    duration: 21,
+    topics: ["Security", "Cloud Native"],
+    tldr: "European data sovereignty requirements are creating growing tension with US SaaS providers, forcing cross-Atlantic business model changes.",
   },
   {
     id: "ddf10",
@@ -1023,6 +1515,10 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-private-saas.jpg",
+    role: "host",
+    duration: 44,
+    topics: ["Security", "Cloud Native"],
+    tldr: "Private SaaS deployments are rising as enterprises demand data sovereignty and security guarantees that multi-tenant SaaS cannot provide.",
   },
   {
     id: "ddf11",
@@ -1035,59 +1531,96 @@ export const contentItems: ContentItem[] = [
     publication: "Data Defenders Forum",
     publicationIcon: DDF,
     thumbnail: "/thumbnails/ddf-data-security-oss.jpg",
+    role: "host",
+    duration: 42,
+    topics: ["Open Source", "Security"],
+    tldr: "Data security practices in open-source projects require balancing transparency with vulnerability management and community governance.",
   },
 
   // ── Podcasts — Humans of Reliability ───────────────────────────────────────
   {
     id: "hor1", category: "podcast", title: "Julien Simon — VP and Chief Evangelist", description: "A conversation about developer advocacy, AI evangelism, and building reliable systems at scale.", date: "2025-11-19", url: "https://rootly.com/humans-of-reliability/julien-simon", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-julien-simon.jpg",
+    role: "host", duration: 30, topics: ["AI Agents", "SRE", "Community Building"], tldr: "Developer advocacy and AI evangelism are evolving as reliability engineering becomes central to scaling AI systems.", coParticipants: [{ company: "Coreweave", name: "Julien Simon" }],
   },
   {
     id: "hor2", category: "podcast", title: "Conor Bronsdon — Head of Content at Galileo", description: "Developer awareness, content strategy, and the human side of reliability engineering.", date: "2025-11-05", url: "https://rootly.com/humans-of-reliability/conor-brondson", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-conor-brondson.jpg",
+    role: "host", duration: 31, topics: ["Community Building", "SRE", "Developer Tools"], tldr: "Content strategy and developer awareness are key to building a human-centered reliability engineering culture.", coParticipants: [{ company: "Galileo", name: "Conor Bronsdon" }],
   },
   {
     id: "hor3", category: "podcast", title: "Rob Zuber — CTO at CircleCI", description: "The end of good code, AI throughput, and what reliability means at CI/CD scale.", date: "2025-09-10", url: "https://rootly.com/humans-of-reliability/the-end-of-good-code-ai-throughput-and-reliability-with-circleci-cto-rob-zuber", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-the-end-of-good-code-ai-throughput-and-reliability-with-circleci-cto-rob-zuber.jpg",
+    role: "host", duration: 37, topics: ["CI/CD", "SRE", "AI Agents"], tldr: "AI throughput is redefining what 'good code' means and forcing CI/CD platforms to rethink reliability at scale.", coParticipants: [{ company: "CircleCI", name: "Rob Zuber" }],
   },
   {
     id: "hor4", category: "podcast", title: "Shery Brauner — SVP of Razor Group", description: "Leading engineering at scale in e-commerce aggregation and the operational challenges that come with it.", date: "2025-08-20", url: "https://rootly.com/humans-of-reliability/shery-brauner", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-shery-brauner.jpg",
+    role: "host", duration: 31, topics: ["SRE", "Platform Engineering"], tldr: "E-commerce aggregation at scale creates unique operational challenges that require robust engineering leadership and reliability practices.", coParticipants: [{ company: "Razor Group", name: "Shery Brauner" }],
   },
   {
     id: "hor5", category: "podcast", title: "Brian Shaw — SVP of Infrastructure and Core Banking", description: "Building and operating core banking infrastructure with a focus on uptime and regulatory compliance.", date: "2025-07-03", url: "https://rootly.com/humans-of-reliability/brian-shaw", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-brian-shaw.jpg",
+    role: "host", duration: 13, topics: ["SRE", "Security"], tldr: "Core banking infrastructure demands extreme uptime and regulatory compliance, making reliability a non-negotiable engineering priority.", coParticipants: [{ company: "Wealthsimple", name: "Brian Shaw" }],
   },
   {
     id: "hor6", category: "podcast", title: "David Owczarek — Former Engineering Director", description: "Lessons from leading engineering teams through organizational change and system migrations.", date: "2025-06-17", url: "https://rootly.com/humans-of-reliability/david-owczarek", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-david-owczarek.jpg",
+    role: "host", duration: 23, topics: ["SRE", "Platform Engineering"], tldr: "Leading engineering teams through organizational change and system migrations requires balancing technical debt with forward momentum.", coParticipants: [{ company: "Former Engineering Director", name: "David Owczarek" }],
   },
   {
     id: "hor7", category: "podcast", title: "Ryan Lockard — VP of Platform Engineering at CVS Health", description: "Platform engineering at healthcare scale — compliance, reliability, and developer experience.", date: "2025-05-30", url: "https://rootly.com/humans-of-reliability/ryan-lockard", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-ryan-lockard.jpg",
+    role: "host", duration: 24, topics: ["Platform Engineering", "SRE", "Security"], tldr: "Platform engineering at healthcare scale requires balancing strict compliance requirements with developer experience and reliability.", coParticipants: [{ company: "CVS Health", name: "Ryan Lockard" }],
   },
   {
     id: "hor8", category: "podcast", title: "Cosmo Wolfe — Head of Technology at Metronome", description: "Building reliable billing infrastructure and the unique challenges of usage-based pricing systems.", date: "2025-05-26", url: "https://rootly.com/humans-of-reliability/cosmo-wolfe", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-cosmo-wolfe.jpg",
+    role: "host", duration: 20, topics: ["SRE", "Platform Engineering"], tldr: "Usage-based billing infrastructure demands exceptional reliability because pricing errors directly impact customer trust and revenue.", coParticipants: [{ company: "Metronome", name: "Cosmo Wolfe" }],
   },
   {
     id: "hor9", category: "podcast", title: "Chase Roberts — COO at Northflank", description: "Operating a developer platform company and the reliability challenges of running infrastructure for others.", date: "2025-05-14", url: "https://rootly.com/humans-of-reliability/chase-roberts", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-chase-roberts.jpg",
+    role: "host", duration: 27, topics: ["Platform Engineering", "SRE", "Cloud Native"], tldr: "Running infrastructure for others multiplies reliability challenges because your downtime cascades into every customer's production.", coParticipants: [{ company: "Northflank", name: "Chase Roberts" }],
   },
   {
     id: "hor10", category: "podcast", title: "Justin Reock — Deputy CTO at DX", description: "Developer experience, engineering metrics, and what makes teams productive and reliable.", date: "2025-04-30", url: "https://rootly.com/humans-of-reliability/justin-reock", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-justin-reock.jpg",
+    role: "host", duration: 37, topics: ["Developer Tools", "SRE", "Observability"], tldr: "Developer experience metrics reveal what makes engineering teams productive and reliable beyond traditional DORA measurements.", coParticipants: [{ company: "DX", name: "Justin Reock" }],
   },
   {
     id: "hor11", category: "podcast", title: "Marino Wijay — Staff Solutions Architect at Kong", description: "API gateway architecture, service mesh patterns, and reliability at the network edge.", date: "2025-04-17", url: "https://rootly.com/humans-of-reliability/marino-wijay", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-marino-wijay.jpg",
+    role: "host", duration: 27, topics: ["Cloud Native", "SRE", "Platform Engineering"], tldr: "API gateway architecture and service mesh patterns are critical for maintaining reliability at the network edge.", coParticipants: [{ company: "Kong", name: "Marino Wijay" }],
   },
   {
     id: "hor12", category: "podcast", title: "Mark Quigley — Head of Platform Engineering", description: "Building internal developer platforms and the organizational dynamics of platform teams.", date: "2025-04-09", url: "https://rootly.com/humans-of-reliability/mark-quigley", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-mark-quigley.jpg",
+    role: "host", duration: 39, topics: ["Platform Engineering", "SRE", "Developer Tools"], tldr: "Building internal developer platforms requires navigating organizational dynamics as much as solving technical architecture challenges.", coParticipants: [{ company: "Quantexa", name: "Mark Quigley" }],
   },
   {
     id: "hor13", category: "podcast", title: "Kaspar von Grunberg — CEO at Humanitec", description: "The platform engineering movement, internal developer platforms, and developer self-service.", date: "2025-03-24", url: "https://rootly.com/humans-of-reliability/kaspar-von-grunberg", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-kaspar-von-grunberg.jpg",
+    role: "host", duration: 25, topics: ["Platform Engineering", "Developer Tools"], tldr: "The platform engineering movement is driven by the need for developer self-service that reduces cognitive load without sacrificing control.", coParticipants: [{ company: "Humanitec", name: "Kaspar von Grunberg" }],
   },
   {
     id: "hor14", category: "podcast", title: "Dan Slimmon — Incident Response Trainer", description: "Training teams for incident response — chaos engineering, game days, and building organizational muscle memory.", date: "2025-03-13", url: "https://rootly.com/humans-of-reliability/dan-slimmon", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-dan-slimmon.jpg",
+    role: "host", duration: 37, topics: ["Incident Management", "SRE"], tldr: "Incident response training through chaos engineering and game days builds organizational muscle memory that pays off during real outages.", coParticipants: [{ company: "Jeli", name: "Dan Slimmon" }],
   },
   {
     id: "hor15", category: "podcast", title: "Mariano Cocirio — Staff Software Engineer at Vercel", description: "Frontend infrastructure reliability, edge computing, and the operational side of Vercel's platform.", date: "2025-03-06", url: "https://rootly.com/humans-of-reliability/mariano-cocirio", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-mariano-cocirio.jpg",
+    role: "host", duration: 13, topics: ["Platform Engineering", "SRE", "Cloud Native"], tldr: "Frontend infrastructure reliability at Vercel depends on edge computing architecture and the operational discipline behind the platform.", coParticipants: [{ company: "Vercel", name: "Mariano Cocirio" }],
   },
   {
     id: "hor16", category: "podcast", title: "Adriana Villela — Principal DevRel at Dynatrace", description: "Observability culture, OpenTelemetry adoption, and the human side of monitoring and debugging.", date: "2025-02-27", url: "https://rootly.com/humans-of-reliability/adriana-villela", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-adriana-villela.jpg",
+    role: "host", duration: 34, topics: ["Observability", "SRE", "Community Building"], tldr: "OpenTelemetry adoption succeeds when teams build an observability culture that values the human side of monitoring and debugging.", coParticipants: [{ company: "Dynatrace", name: "Adriana Villela" }],
   },
   {
     id: "hor17", category: "podcast", title: "Sean Goedecke — Staff Software Engineer at GitHub", description: "Reliability at GitHub scale — incident management, deployment practices, and engineering culture.", date: "2025-02-18", url: "https://rootly.com/humans-of-reliability/sean-goedecke", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/hor-sean-goedecke.jpg",
+    role: "host", duration: 17, topics: ["SRE", "Incident Management", "DevOps"], tldr: "Reliability at GitHub scale requires disciplined incident management, progressive deployment practices, and a strong engineering culture.", coParticipants: [{ company: "GitHub", name: "Sean Goedecke" }],
+  },
+  {
+    id: "hor18", category: "podcast", title: "Swizec Teller — Bestselling Author", description: "Code is cheap, reliability isn't — owning production in the AI era, the hidden complexity of SRE work, and why human ownership remains essential.", date: "2026-02-17", url: "https://rootly.com/humans-of-reliability/swizec-teller", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/yt-tdcCLv1ZXSw.jpg",
+    role: "host", duration: 29, topics: ["SRE", "AI Agents"], tldr: "Code is cheap but reliability is not; human ownership of production remains essential even as AI generates more of the code.", coParticipants: [{ company: "Author", name: "Swizec Teller" }],
+  },
+  {
+    id: "hor19", category: "podcast", title: "Dileshni Jayasinghe — VP of Technology at commonsku", description: "Democratizing reliability — empowering non-engineers with operational power, incident management as a muscle, and AI-powered postmortems.", date: "2026-01-14", url: "https://rootly.com/humans-of-reliability/democratizing-reliability-giving-non-engineers-real-operational-power-with-dileshni-jayasinghe-commonsku", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/yt-5y2e7fUo3NA.jpg",
+    role: "host", duration: 22, topics: ["SRE", "Incident Management", "AI Agents"], tldr: "Democratizing reliability means empowering non-engineers with operational power and treating incident management as an organizational muscle.", coParticipants: [{ company: "commonsku", name: "Dileshni Jayasinghe" }],
+  },
+  {
+    id: "hor20", category: "podcast", title: "Tomás Hernando Koffman — Co-founder at Not Diamond", description: "99%+ accuracy on a moving target — model deprecation, reliability with LLMs, and treating prompts as architectural components.", date: "2025-12-23", url: "https://rootly.com/humans-of-reliability/tomas-hernando-koffman", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/yt-v9bGgXE1YE0.jpg",
+    role: "host", duration: 30, topics: ["AI Agents", "SRE", "Machine Learning"], tldr: "Maintaining 99%+ accuracy with LLMs requires treating prompts as architectural components and planning for constant model deprecation.", coParticipants: [{ company: "Not Diamond", name: "Tomás Hernando Koffman" }],
+  },
+  {
+    id: "hor21", category: "podcast", title: "Eduardo Ordax — Principal GTM GenAI at AWS", description: "The reality of GenAI in production — why organizational culture is the biggest blocker, scaling non-deterministic LLM systems, and what separates AI winners from experimenters.", date: "2025-12-14", url: "https://rootly.com/humans-of-reliability/eduardo-ordax", publication: "Humans of Reliability", publicationIcon: ROOTLY, thumbnail: "/thumbnails/yt-rIZiEIRHw0o.jpg", featured: true,
+    role: "host", duration: 27, topics: ["AI Agents", "SRE", "Cloud Native"], tldr: "Organizational culture is the biggest blocker to GenAI in production; scaling non-deterministic LLM systems separates winners from experimenters.", coParticipants: [{ company: "AWS", name: "Eduardo Ordax" }],
   },
 
   // ── Podcasts — Data on Kubernetes Community ────────────────────────────────
@@ -1101,6 +1634,14 @@ export const contentItems: ContentItem[] = [
     url: "https://www.youtube.com/watch?v=Fq8vW3vUnck",
     publication: "Data on Kubernetes Community",
     thumbnail: "/thumbnails/yt-Fq8vW3vUnck.jpg",
+    role: "host",
+    duration: 32,
+    topics: ["PostgreSQL", "Data on Kubernetes", "Kubernetes"],
+    tldr: "Running Postgres at scale on Kubernetes requires operators, proper storage configuration, and robust Day 2 operational patterns.",
+    coParticipants: [
+      { company: "OnGres", name: "Alvaro Hernandez" },
+      { company: "DoKC", name: "Bart Farrell" },
+    ],
   },
 
   // ── GitHub ─────────────────────────────────────────────────────────────────
@@ -1114,7 +1655,11 @@ export const contentItems: ContentItem[] = [
     url: "https://github.com/Rootly-AI-Labs/SRE-skills-bench",
     publication: "GitHub",
     publicationIcon: GH,
-    thumbnail: "/thumbnails/gh-sre-skills-bench.png",
+    thumbnail: "/thumbnails/sre-skills-bench.png",
+    stars: 12,
+    techStack: ["Python", "Shell"],
+    topics: ["SRE", "AI Agents", "Incident Management"],
+    tldr: "A benchmark suite for evaluating how well AI agents perform real-world SRE tasks like incident diagnosis and runbook execution.",
   },
   {
     id: "g2",
@@ -1126,19 +1671,11 @@ export const contentItems: ContentItem[] = [
     url: "https://github.com/Rootly-AI-Labs/On-Call-Health",
     publication: "GitHub",
     publicationIcon: GH,
-    thumbnail: "/thumbnails/oncallhealth.png",
-  },
-  {
-    id: "g3",
-    category: "github",
-    title: "logs-dataset",
-    description:
-      "Real production logs — Apache access & error, OpenSSH — openly accessible for researching, benchmarking, and training AI-powered SRE automation.",
-    date: "2024-01-01",
-    url: "https://github.com/Rootly-AI-Labs/logs-dataset",
-    publication: "GitHub",
-    publicationIcon: GH,
-    thumbnail: "/thumbnails/logs-dataset.png",
+    thumbnail: "/thumbnails/oncall-health.png",
+    stars: 32,
+    techStack: ["Python", "TypeScript"],
+    topics: ["SRE", "Incident Management", "Observability"],
+    tldr: "Detects early warning signs of on-call burnout by aggregating data from PagerDuty, Rootly, Linear, GitHub, and Slack.",
   },
   {
     id: "g4",
@@ -1151,6 +1688,10 @@ export const contentItems: ContentItem[] = [
     publication: "GitHub",
     publicationIcon: GH,
     thumbnail: "/thumbnails/gh-rootly-mcp.png",
+    stars: 39,
+    techStack: ["Python"],
+    topics: ["MCP", "AI Agents", "Incident Management"],
+    tldr: "An MCP server enabling AI agents to interact with Rootly's incident management workflows via the Model Context Protocol.",
   },
   {
     id: "g5",
@@ -1162,7 +1703,24 @@ export const contentItems: ContentItem[] = [
     url: "https://github.com/sylvainkalache/water-height-sensor",
     publication: "GitHub",
     publicationIcon: GH,
-    thumbnail: "/thumbnails/gh-water-height-sensor.jpg",
+    thumbnail: "/thumbnails/water-height-sensor.png",
+    stars: 1,
+    techStack: ["C++"],
+    topics: ["IoT", "Open Source"],
+    tldr: "An Arduino-based sensor that measures Fort Lauderdale canal water height for environmental monitoring.",
+  },
+  {
+    id: "g6",
+    category: "github",
+    title: "DevOps Foundations Professional Certificate",
+    description:
+      "edX Professional Certificate program covering DevOps fundamentals — CI/CD, infrastructure as code, monitoring, and culture.",
+    date: "2023-01-01",
+    url: "https://www.edx.org/certificates/professional-certificate/anahuacx-devops-foundations",
+    publication: "edX",
+    thumbnail: "/thumbnails/edx-devops.jpg",
+    topics: ["DevOps", "CI/CD", "Developer Education"],
+    tldr: "A professional certificate program covering DevOps fundamentals including CI/CD, infrastructure as code, monitoring, and culture.",
   },
 
   // ── In the News ────────────────────────────────────────────────────────────
@@ -1177,6 +1735,9 @@ export const contentItems: ContentItem[] = [
     publication: "Le Monde",
     publicationIcon: LEMONDE,
     thumbnail: "/thumbnails/news-n3.jpg",
+    role: "subject",
+    topics: ["Developer Education", "EdTech"],
+    tldr: "French entrepreneurs launch an innovative engineering school in the heart of Silicon Valley.",
   },
   {
     id: "n7",
@@ -1189,6 +1750,9 @@ export const contentItems: ContentItem[] = [
     publication: "CNBC",
     publicationIcon: CNBC,
     thumbnail: "/thumbnails/news-n7.jpg",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "Blockchain technology creates tamper-proof, verifiable academic records that could transform how schools share student credentials.",
   },
   {
     id: "n9",
@@ -1201,6 +1765,9 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/news-n9.jpg",
+    role: "subject",
+    topics: ["Developer Education", "Community Building"],
+    tldr: "International botathon finalists selected to present their AI chatbot projects at VentureBeat's MobileBeat 2016 conference.",
   },
   {
     id: "n11",
@@ -1213,6 +1780,11 @@ export const contentItems: ContentItem[] = [
     publication: "CIO",
     publicationIcon: CIO,
     thumbnail: "/thumbnails/news-default.jpg",
+    role: "author",
+    wordCount: 478,
+    readingTime: 3,
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "The tech industry should invest in training new engineers from scratch rather than constantly retraining existing workers.",
   },
   {
     id: "n13",
@@ -1225,6 +1797,9 @@ export const contentItems: ContentItem[] = [
     publication: "CNN Money",
     publicationIcon: CNNMONEY,
     thumbnail: "/thumbnails/news-n13.jpg",
+    role: "subject",
+    topics: ["Developer Education", "EdTech"],
+    tldr: "Holberton School rethinks tech education with project-based learning and no traditional lectures to train the next generation.",
   },
   {
     id: "n14",
@@ -1237,6 +1812,9 @@ export const contentItems: ContentItem[] = [
     publication: "Dice",
     publicationIcon: DICE,
     thumbnail: "/thumbnails/news-n14.jpg",
+    role: "subject",
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "Whiteboard interviews fail to assess real engineering skills; companies should adopt practical, project-based evaluation approaches.",
   },
   {
     id: "n17",
@@ -1249,6 +1827,9 @@ export const contentItems: ContentItem[] = [
     publication: "Fortune",
     publicationIcon: FORTUNE,
     thumbnail: "/thumbnails/news-n17.webp",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "Holberton School raises $2.3 million to scale its alternative software engineering training model in San Francisco.",
   },
   {
     id: "n18",
@@ -1261,6 +1842,9 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/news-n18.jpg",
+    role: "subject",
+    topics: ["Workforce Development"],
+    tldr: "Automation makes old jobs obsolete; the focus should be on training workers for future roles instead of restoring vanished ones.",
   },
   {
     id: "n19",
@@ -1273,6 +1857,9 @@ export const contentItems: ContentItem[] = [
     publication: "Le Monde",
     publicationIcon: LEMONDE,
     thumbnail: "/thumbnails/news-n19.webp",
+    role: "subject",
+    topics: ["Developer Education", "Community Building"],
+    tldr: "French tech professionals leverage their unique skills and quality reputation to build international careers.",
   },
   {
     id: "n21",
@@ -1285,6 +1872,9 @@ export const contentItems: ContentItem[] = [
     publication: "Fortune",
     publicationIcon: FORTUNE,
     thumbnail: "/thumbnails/news-n21.webp",
+    role: "subject",
+    topics: ["Diversity in Tech", "Workforce Development"],
+    tldr: "Applying the NFL's Rooney Rule to tech hiring requires diverse candidate slates and is measurably reducing the representation gap.",
   },
   {
     id: "n23",
@@ -1297,6 +1887,9 @@ export const contentItems: ContentItem[] = [
     publication: "Fortune",
     publicationIcon: FORTUNE,
     thumbnail: "/thumbnails/news-n23.webp",
+    role: "subject",
+    topics: ["Diversity in Tech", "EdTech"],
+    tldr: "Grammy-winning artist NE-YO invests in Holberton School to support a new model of tech education focused on diversity and access.",
   },
   {
     id: "n24",
@@ -1309,6 +1902,9 @@ export const contentItems: ContentItem[] = [
     publication: "The New York Times",
     publicationIcon: NYT,
     thumbnail: "/thumbnails/news-n24.jpg",
+    role: "subject",
+    topics: ["Diversity in Tech", "Developer Education"],
+    tldr: "Holberton School's two-year program builds a more diverse tech talent pipeline through peer learning and project-based curricula.",
   },
   {
     id: "n25",
@@ -1321,6 +1917,9 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/news-n25.png",
+    role: "subject",
+    topics: ["Developer Education", "EdTech"],
+    tldr: "Dev Bootcamp's closure exposes the gap between coding bootcamp hype and sustainable technical education at scale.",
   },
   {
     id: "n26",
@@ -1333,6 +1932,9 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/news-n26.jpg",
+    role: "subject",
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "Amazon's 50,000-job push highlights the engineer shortage and the need for alternative education pathways to fill the gap.",
   },
   {
     id: "n27",
@@ -1345,6 +1947,9 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/news-n27.webp",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "Holberton School secures new investment from tech industry leaders to scale its peer-learning software engineering education model.",
   },
   {
     id: "n28",
@@ -1357,6 +1962,9 @@ export const contentItems: ContentItem[] = [
     publication: "World Economic Forum",
     publicationIcon: WEF,
     thumbnail: "/thumbnails/world.png",
+    role: "subject",
+    topics: ["Workforce Development", "Developer Education"],
+    tldr: "The World Economic Forum predicts how work, education, and skills will evolve as automation reshapes the global economy.",
   },
   {
     id: "n29",
@@ -1369,6 +1977,9 @@ export const contentItems: ContentItem[] = [
     publication: "World Economic Forum",
     publicationIcon: WEF,
     thumbnail: "/thumbnails/world.png",
+    role: "subject",
+    topics: ["Developer Education", "Workforce Development"],
+    tldr: "Education systems must adapt to the fourth industrial revolution by emphasizing problem-solving and collaboration over rote learning.",
   },
   {
     id: "n30",
@@ -1381,6 +1992,9 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n30.webp",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "Holberton School closes an $8.2 million funding round to expand its peer-learning software engineering program globally.",
   },
   {
     id: "n31",
@@ -1393,6 +2007,9 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n31.png",
+    role: "subject",
+    topics: ["Community Building"],
+    tldr: "Forbes council members share seven marketing strategies tailored for growing businesses in San Francisco's competitive landscape.",
   },
   {
     id: "n32",
@@ -1405,6 +2022,9 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n32.png",
+    role: "subject",
+    topics: ["Community Building"],
+    tldr: "Profiles of Forbes San Francisco Business Council members share insights on building companies in the Bay Area tech ecosystem.",
   },
   {
     id: "n33",
@@ -1417,6 +2037,9 @@ export const contentItems: ContentItem[] = [
     publication: "CIO",
     publicationIcon: CIO,
     thumbnail: "/thumbnails/news-n33.jpg",
+    role: "subject",
+    topics: ["Diversity in Tech", "Workforce Development"],
+    tldr: "Engineering managers can find hidden tech talent by looking beyond traditional backgrounds and using skills-based hiring approaches.",
   },
   {
     id: "n34",
@@ -1429,6 +2052,9 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/news-n34.jpg",
+    role: "subject",
+    topics: ["Developer Education", "EdTech"],
+    tldr: "Fixing tech education requires addressing systemic access and pedagogy issues before adding more technology on top.",
   },
   {
     id: "n35",
@@ -1441,6 +2067,9 @@ export const contentItems: ContentItem[] = [
     publication: "The New York Times",
     publicationIcon: NYT,
     thumbnail: "/thumbnails/news-n35.jpg",
+    role: "subject",
+    topics: ["Machine Learning", "Workforce Development"],
+    tldr: "AI is creating entirely new job categories that require workers to develop skills bridging domain expertise and technical fluency.",
   },
   {
     id: "n36",
@@ -1453,6 +2082,9 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/news-n36.jpg",
+    role: "subject",
+    topics: ["Diversity in Tech", "EdTech"],
+    tldr: "NE-YO partners with Holberton School to tackle Silicon Valley's diversity gap through accessible, project-based tech education.",
   },
   {
     id: "n38",
@@ -1465,6 +2097,9 @@ export const contentItems: ContentItem[] = [
     publication: "CIO",
     publicationIcon: CIO,
     thumbnail: "/thumbnails/news-n38.jpg",
+    role: "subject",
+    topics: ["DevOps", "Community Building"],
+    tldr: "DevOps transformations stall due to cultural resistance, tooling fragmentation, and lack of organizational commitment to change.",
   },
   {
     id: "n40",
@@ -1477,6 +2112,11 @@ export const contentItems: ContentItem[] = [
     publication: "CIO",
     publicationIcon: CIO,
     thumbnail: "/thumbnails/news-n40.jpg",
+    role: "author",
+    wordCount: 911,
+    readingTime: 5,
+    topics: ["Machine Learning", "Security", "DevOps"],
+    tldr: "Machine learning is transforming code quality, security scanning, and agile workflows by automating pattern detection at scale.",
   },
   {
     id: "n42",
@@ -1489,6 +2129,9 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n42.png",
+    role: "subject",
+    topics: ["Diversity in Tech", "Workforce Development"],
+    tldr: "Six actionable strategies for building a more diverse workforce, from pipeline programs to inclusive hiring practices.",
   },
   {
     id: "n43",
@@ -1501,6 +2144,9 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/news-n43.jpg",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "Holberton School expands to Medellin, Colombia, bringing its peer-learning software engineering program to Latin America.",
   },
   {
     id: "n44",
@@ -1513,6 +2159,9 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n44.jpg",
+    role: "subject",
+    topics: ["EdTech", "Diversity in Tech"],
+    tldr: "Priyanka Chopra Jonas invests in Holberton School, backing its mission to democratize tech education globally.",
   },
   {
     id: "n49",
@@ -1525,6 +2174,9 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes France",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n49.jpg",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "Holberton School trains the next generation of software engineers through innovative peer-learning pedagogy.",
   },
   {
     id: "n50",
@@ -1537,6 +2189,9 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/news-n50.jpg",
+    role: "subject",
+    topics: ["AI Agents", "Workforce Development"],
+    tldr: "LinkedIn's AI-powered interview practice tool gives job candidates real-time feedback to improve their responses.",
   },
   {
     id: "n51",
@@ -1549,6 +2204,9 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n51.jpg",
+    role: "subject",
+    topics: ["Diversity in Tech", "EdTech"],
+    tldr: "Songwriter Savan Kotecha joins Holberton School's board of trustees to help increase diversity in the tech industry.",
   },
   {
     id: "n53",
@@ -1561,6 +2219,11 @@ export const contentItems: ContentItem[] = [
     publication: "Forbes",
     publicationIcon: FORBES,
     thumbnail: "/thumbnails/news-n53.jpg",
+    role: "author",
+    wordCount: 756,
+    readingTime: 4,
+    topics: ["Developer Education", "Technical Writing"],
+    tldr: "Handwriting notes improves retention, comprehension, and creative thinking compared to typing because it forces active processing.",
   },
   {
     id: "n54",
@@ -1573,6 +2236,9 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/news-n54.jpg",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "Holberton School raises $20M and pivots from running schools directly to licensing its curriculum as a SaaS platform.",
   },
   {
     id: "n59",
@@ -1585,6 +2251,9 @@ export const contentItems: ContentItem[] = [
     publication: "TechCrunch",
     publicationIcon: TC,
     thumbnail: "/thumbnails/news-n59.jpg",
+    role: "subject",
+    topics: ["EdTech", "Developer Education"],
+    tldr: "African Leadership Group acquires Holberton School to expand access to software engineering education across Africa.",
   },
 ]
 

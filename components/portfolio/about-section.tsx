@@ -17,7 +17,7 @@ const stats = [
   { value: "45+",  label: "Published articles" },
   { value: "59",   label: "Press features & mentions" },
   { value: "58",   label: "Podcast episodes" },
-  { value: "4",    label: "Open-source projects" },
+  { value: "3",    label: "Open-source projects" },
 ]
 
 export function AboutSection() {

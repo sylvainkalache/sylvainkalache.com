@@ -147,3 +147,22 @@
   0%, 100% { box-shadow: 0 0 4px oklch(0.72 0.18 290 / 0.2); opacity: 0.4; transform: scale(1); }
   50% { box-shadow: 0 0 30px 10px oklch(0.72 0.18 290 / 0.9), 0 0 10px oklch(0.72 0.18 290 / 0.7) inset; opacity: 1; transform: scale(1.08); }
 }
+
+@keyframes marker-appear {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes marker-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.marker-appear {
+  animation: marker-appear 400ms ease-out both;
+}
+
+.marker-pulse {
+  animation: marker-appear 400ms ease-out both, marker-pulse 2s ease-in-out 400ms infinite;
+}

@@ -2,6 +2,7 @@ import { Nav } from "@/components/portfolio/nav"
 import { Hero } from "@/components/portfolio/hero"
 import { ContentGrid } from "@/components/portfolio/content-grid"
 import { AboutSection } from "@/components/portfolio/about-section"
+import { AgentTeaser } from "@/components/portfolio/agent-teaser"
 import { Footer } from "@/components/portfolio/footer"
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <ContentGrid />
       <AboutSection />
+      <AgentTeaser />
       <Footer />
     </main>
   )
