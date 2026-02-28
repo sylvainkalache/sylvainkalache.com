@@ -33,9 +33,25 @@ export function Hero() {
       <div className="relative z-10 flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
         <div className="max-w-3xl">
           {/* Eyebrow */}
-          <p className="font-mono text-xs text-accent tracking-widest uppercase mb-5">
-            sylvain kalache
-          </p>
+          <div className="flex items-center gap-3 mb-5">
+            {/* Small photo on mobile, hidden on sm+ */}
+            <div className="relative w-10 h-10 sm:hidden shrink-0">
+              <div className="absolute -inset-[4px] rounded-full rotating-glow blur-sm" />
+              <div className="relative w-full h-full rounded-full overflow-hidden">
+                <Image
+                  src="/sylvain-kalache.jpg"
+                  alt="Sylvain Kalache"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover object-top"
+                  priority
+                />
+              </div>
+            </div>
+            <p className="font-mono text-xs text-accent tracking-widest uppercase">
+              sylvain kalache
+            </p>
+          </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1] mb-6 text-balance">
@@ -52,7 +68,7 @@ export function Hero() {
         </div>
 
         {/* Profile photo with rotating glow */}
-        <div className="shrink-0 sm:ml-auto">
+        <div className="hidden sm:block shrink-0 sm:ml-auto">
           <div className="relative w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 group/photo">
             {/* Rotating glow */}
             <div className="absolute -inset-[10px] rounded-2xl rotating-glow blur-xl" />
