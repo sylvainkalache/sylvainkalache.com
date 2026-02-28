@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col justify-center px-6 pt-20 pb-10 sm:pt-24 sm:pb-12 max-w-7xl mx-auto"
+      className="relative flex flex-col justify-center px-6 pt-20 pb-0 sm:pt-24 sm:pb-0 max-w-7xl mx-auto"
       aria-label="Introduction"
     >
       {/* Dot grid */}

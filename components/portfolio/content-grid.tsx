@@ -62,7 +62,7 @@ export function ContentGrid() {
   const paged = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
 
   return (
-    <section id="work" className="max-w-7xl mx-auto px-6 py-16">
+    <section id="work" className="max-w-7xl mx-auto px-6 pt-4 pb-16">
       {/* Section label */}
       <div className="flex items-center gap-3 mb-8">
         <span className="font-mono text-xs text-accent tracking-widest uppercase">./work</span>
