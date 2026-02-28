@@ -319,6 +319,18 @@ export const contentItems: ContentItem[] = [
 
   // ── Articles — VentureBeat ─────────────────────────────────────────────────
   {
+    id: "vb0",
+    category: "article",
+    title: "Developers lose focus 1,200 times a day — how MCP could change that",
+    description:
+      "Context switching kills developer productivity. How the Model Context Protocol (MCP) can reduce tool fragmentation and keep engineers in flow.",
+    date: "2025-12-22",
+    url: "https://venturebeat.com/ai/developers-lose-focus-1200-times-a-day-how-mcp-could-change-that/",
+    publication: "VentureBeat",
+    publicationIcon: VB,
+    thumbnail: "/thumbnails/vb-mcp-focus.jpg",
+  },
+  {
     id: "vb1",
     category: "article",
     title: "Dev bootcamp shuttering shows challenges of teaching coal miners to code",
@@ -401,18 +413,6 @@ export const contentItems: ContentItem[] = [
     publication: "VentureBeat",
     publicationIcon: VB,
     thumbnail: "/thumbnails/vb-amazon-jobs.jpg",
-  },
-  {
-    id: "vb8",
-    category: "article",
-    title: "Apprenticeships could solve tech's diversity problem",
-    description:
-      "The case for tech apprenticeships as a scalable solution to diversity challenges in the software industry.",
-    date: "2018-02-01",
-    url: "https://venturebeat.com/technology/apprenticeships-could-solve-techs-diversity-problem",
-    publication: "VentureBeat",
-    publicationIcon: VB,
-    thumbnail: "/thumbnails/vb-apprenticeships.jpg",
   },
 
   // ── Articles — LeadDev ─────────────────────────────────────────────────────
@@ -1273,18 +1273,6 @@ export const contentItems: ContentItem[] = [
     publication: "Le Monde",
     publicationIcon: LEMONDE,
     thumbnail: "/thumbnails/news-n19.webp",
-  },
-  {
-    id: "n20",
-    category: "article",
-    title: "Apprenticeships Could Solve Tech's Diversity Problem",
-    description:
-      "How apprenticeship models borrowed from traditional trades could create more diverse, accessible pathways into the tech industry.",
-    date: "2017-04-16",
-    url: "https://venturebeat.com/2017/04/16/apprenticeships-could-solve-techs-diversity-problem/",
-    publication: "VentureBeat",
-    publicationIcon: VB,
-    thumbnail: "/thumbnails/news-n20.jpg",
   },
   {
     id: "n21",

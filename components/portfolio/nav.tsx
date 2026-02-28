@@ -33,7 +33,7 @@ function useTypewriter(text: string, speed = 80, startDelay = 400) {
 
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/sylvainkalache/", label: "LinkedIn" },
-  { icon: Github, href: "https://github.com/Rootly-AI-Labs", label: "GitHub" },
+  { icon: Github, href: "https://github.com/sylvainkalache", label: "GitHub" },
   { icon: Twitter, href: "https://x.com/sylvainkalache", label: "X / Twitter" },
 ]
 

@@ -17,7 +17,7 @@ export function Footer() {
             <span className="text-accent">~/</span>sylvain
           </span>
           <span className="text-xs text-muted-foreground">
-            &copy; {year} — Built with Next.js
+            &copy; {year}
           </span>
         </div>
 

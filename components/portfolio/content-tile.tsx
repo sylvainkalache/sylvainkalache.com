@@ -11,7 +11,6 @@ import {
   Github,
   Newspaper,
   UsersRound,
-  ArrowUpRight,
   Star,
   Calendar,
 } from "lucide-react"
@@ -162,12 +161,18 @@ export function ContentTile({ item }: { item: ContentItem }) {
 
       {/* Body */}
       <div className="flex flex-col flex-1 px-4 pt-3 pb-4 gap-2">
-        {/* Publication row */}
-        {item.publication && (
-          <span className="font-mono text-[11px] text-muted-foreground truncate">
-            {item.publication}
+        {/* Publication + date row */}
+        <div className="flex items-center justify-between">
+          {item.publication && (
+            <span className="font-mono text-[11px] text-muted-foreground truncate">
+              {item.publication}
+            </span>
+          )}
+          <span className="flex items-center gap-1 font-mono text-[11px] text-muted-foreground tabular-nums shrink-0 ml-auto">
+            <Calendar size={10} aria-hidden="true" />
+            {formatDate(item.date)}
           </span>
-        )}
+        </div>
 
         {/* Title */}
         <h3 className={cn(
@@ -185,12 +190,8 @@ export function ContentTile({ item }: { item: ContentItem }) {
         </p>
 
         {/* Meta footer */}
-        <div className="flex items-center justify-between pt-1 mt-auto">
-          <div className="flex items-center gap-2.5 flex-wrap">
-            <span className="flex items-center gap-1 font-mono text-[11px] text-muted-foreground tabular-nums">
-              <Calendar size={10} aria-hidden="true" />
-              {formatDate(item.date)}
-            </span>
+        {(item.stars !== undefined || item.language) && (
+          <div className="flex items-center gap-2.5 flex-wrap pt-1 mt-auto">
             {item.stars !== undefined && (
               <span className="flex items-center gap-1 font-mono text-[11px] text-muted-foreground tabular-nums">
                 <Star size={10} aria-hidden="true" />
@@ -206,18 +207,7 @@ export function ContentTile({ item }: { item: ContentItem }) {
               </span>
             )}
           </div>
-
-          <span
-            className={cn(
-              "shrink-0 w-6 h-6 rounded-md flex items-center justify-center",
-              "text-muted-foreground transition-all duration-200",
-              "group-hover:text-foreground group-hover:bg-secondary",
-            )}
-            aria-hidden="true"
-          >
-            <ArrowUpRight size={13} />
-          </span>
-        </div>
+        )}
       </div>
     </a>
   )
