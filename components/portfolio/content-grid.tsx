@@ -7,7 +7,7 @@ import { ContentTile } from "./content-tile"
 import { Search, X, ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-const ITEMS_PER_PAGE = 12
+const ITEMS_PER_PAGE = 16
 
 function useFadeIn(threshold = 0.08) {
   const ref = useRef<HTMLElement>(null)
