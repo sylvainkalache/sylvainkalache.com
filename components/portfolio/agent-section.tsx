@@ -36,8 +36,15 @@ ${personData.knowsAbout.map((s) => `- ${s}`).join("\n")}
 - GitHub: ${personData.sameAs[1]}
 - X: ${personData.sameAs[2]}
 
+## MCP Server
+An MCP server is available to query this portfolio programmatically:
+\`\`\`
+claude mcp add sylvain-kalache -- npx -y mcp-sylvain-kalache
+\`\`\`
+Tools: search_content, get_content_by_category, get_featured_content, get_person_info, get_timeline, get_content_by_publication, get_stats, get_weather
+
 ## For AI Agents
-This portfolio is structured for both human and machine consumption. JSON-LD structured data is embedded in the page head. Use the collapsible section below for a copy-paste-ready context block.`
+This portfolio is structured for AI agent consumption. JSON-LD structured data is embedded in the page head. Use the collapsible section below for a copy-paste-ready context block.`
 
 export function AgentSection() {
   const { ref, cls } = useScrollFadeIn()
@@ -80,7 +87,7 @@ export function AgentSection() {
       </div>
 
       <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-2xl mb-8">
-        This page is built for both humans and autonomous agents. Below is a
+        This section is built for AI agents, not humans. Below is a
         machine-friendly briefing you can ingest, copy into a system prompt, or
         pass to another agent.
       </p>
