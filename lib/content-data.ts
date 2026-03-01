@@ -1108,6 +1108,30 @@ export const contentItems: ContentItem[] = [
 
   // ── Panel Moderation ────────────────────────────────────────────────────────
   {
+    id: "p-srecon-mlops",
+    category: "panel",
+    title: "Tea, Pipelines, and Retries: A Practical Guide to MLOps",
+    description:
+      "Discussion at SREcon EMEA 2025 on how AI is transforming the software development lifecycle — CI/CD pipelines, deployments, scaling, monitoring, incident management, reliability tooling, and emerging disciplines like LLMOps.",
+    date: "2025-10-07",
+    url: "https://www.usenix.org/conference/srecon25emea/presentation/vechtomova-dt",
+    publication: "SREcon EMEA 2025",
+    publicationIcon: SRECON,
+    thumbnail: "/thumbnails/srecon-talk-photo.png",
+    role: "moderator",
+    city: "Dublin",
+    conference: "SREcon EMEA 2025",
+    topics: ["SRE", "MLOps", "AI Agents", "CI/CD"],
+    tldr: "How AI is transforming post-code workflows — from CI/CD and monitoring to incident management and LLMOps.",
+    coParticipants: [
+      { company: "Marvelous MLOps", name: "Maria Vechtomova" },
+      { company: "Meta", name: "Jay Lees" },
+      { company: "Honeycomb", name: "Charity Majors" },
+      { company: "Anthropic", name: "Todd Underwood" },
+      { company: "Zalando", name: "Alejandro Saucedo" },
+    ],
+  },
+  {
     id: "p-dev-renaissance",
     category: "panel",
     title: "How AI is Fueling the Developer Renaissance",
