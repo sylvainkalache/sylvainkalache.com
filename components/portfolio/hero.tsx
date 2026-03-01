@@ -1,6 +1,38 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
+import { Copy, Check } from "lucide-react"
+
+const MCP_COMMAND = "claude mcp add sylvain-kalache -- npx -y mcp-sylvain-kalache"
+
+function McpSnippet() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(MCP_COMMAND)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+  return (
+    <div className="mt-6 w-full">
+      <button
+        onClick={handleCopy}
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-xl border border-border bg-card hover:border-accent/40 transition-colors text-left group cursor-pointer"
+      >
+        <code className="flex-1 font-mono text-xs text-muted-foreground break-all">
+          {MCP_COMMAND}
+        </code>
+        {copied ? (
+          <Check size={16} className="shrink-0 text-accent" />
+        ) : (
+          <Copy size={16} className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" />
+        )}
+      </button>
+    </div>
+  )
+}
 
 export function Hero() {
   return (
@@ -62,10 +94,11 @@ export function Hero() {
             Co-founded Holberton School, which trained thousands of engineers across 25 countries.
             I write, speak, and build communities around AI for reliability engineering.
           </p>
+
         </div>
 
-        {/* Profile photo with rotating glow */}
-        <div className="hidden sm:block shrink-0 sm:ml-auto">
+        {/* Profile photo with rotating glow + MCP snippet */}
+        <div className="hidden sm:flex flex-col items-center justify-between shrink-0 sm:ml-auto self-stretch">
           <div className="relative w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 group/photo">
             {/* Rotating glow */}
             <div className="absolute -inset-[10px] rounded-2xl rotating-glow blur-xl" />
@@ -80,6 +113,7 @@ export function Hero() {
               />
             </div>
           </div>
+          <McpSnippet />
         </div>
       </div>
     </section>

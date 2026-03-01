@@ -1723,6 +1723,23 @@ export const contentItems: ContentItem[] = [
     tldr: "A professional certificate program covering DevOps fundamentals including CI/CD, infrastructure as code, monitoring, and culture.",
   },
 
+  {
+    id: "g7",
+    category: "github",
+    title: "MCP-Sylvain-Kalache",
+    description:
+      "A personal MCP server that exposes my portfolio data — articles, podcasts, talks, panels, GitHub projects, news, bio, timeline, and live weather — as queryable tools for AI agents.",
+    date: "2025-01-15",
+    url: "https://github.com/sylvainkalache/MCP-Sylvain-Kalache",
+    publication: "GitHub",
+    publicationIcon: GH,
+    thumbnail: "/thumbnails/mcp-sylvain-kalache.jpg",
+    stars: 0,
+    techStack: ["TypeScript"],
+    topics: ["MCP", "AI Agents", "Portfolio"],
+    tldr: "A personal MCP server letting AI agents query my portfolio website data, career timeline, and live weather.",
+  },
+
   // ── In the News ────────────────────────────────────────────────────────────
   {
     id: "n3",
