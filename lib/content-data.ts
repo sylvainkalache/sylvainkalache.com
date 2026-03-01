@@ -1129,6 +1129,7 @@ export const contentItems: ContentItem[] = [
       { company: "Honeycomb", name: "Charity Majors" },
       { company: "Anthropic", name: "Todd Underwood" },
       { company: "Zalando", name: "Alejandro Saucedo" },
+      { company: "Stanza", name: "Niall Murphy" },
     ],
   },
   {
